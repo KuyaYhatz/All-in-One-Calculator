@@ -1,0 +1,912 @@
+/*==================================================*
+ * NETWORKING CALCULATOR
+ * FUTURISTIC AQUA THEME
+ *
+ * UNIQUE PREFIX:
+ * netCalc-
+ *==================================================*/
+
+
+.netCalc-container {
+
+    width: 100%;
+
+    min-height: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: #dfffff;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0,255,255,.10),
+            transparent 35%
+        ),
+
+        #02080c;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/*==================================================*
+ * HEADER
+ *==================================================*/
+
+.netCalc-header {
+
+    position: relative;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.22);
+
+    background:
+        rgba(0,20,24,.78);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 25px
+        rgba(0,255,255,.06);
+}
+
+
+.netCalc-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00ffff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px
+        #00ffff;
+}
+
+
+.netCalc-badge {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 10px;
+
+    color: #00ffff;
+
+    border:
+        1px solid
+        rgba(0,255,255,.3);
+
+    background:
+        rgba(0,255,255,.04);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.netCalc-header h1 {
+
+    margin: 0;
+
+    color: #00ffff;
+
+    font-size: 32px;
+
+    text-shadow:
+        0 0 15px
+        rgba(0,255,255,.5);
+}
+
+
+.netCalc-header p {
+
+    margin: 10px 0 0;
+
+    color:
+        rgba(220,255,255,.65);
+
+    line-height: 1.6;
+}
+
+
+/*==================================================*
+ * MAIN LAYOUT
+ *==================================================*/
+
+.netCalc-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        250px 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/*==================================================*
+ * MENU
+ *==================================================*/
+
+.netCalc-menu {
+
+    padding: 15px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.2);
+
+    background:
+        rgba(0,15,20,.85);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,255,255,.05);
+}
+
+
+.netCalc-menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 5px 15px;
+
+    border-bottom:
+        1px solid
+        rgba(0,255,255,.12);
+
+    margin-bottom: 10px;
+}
+
+
+.netCalc-menu-header span {
+
+    color: #00ffff;
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.netCalc-menu-header small {
+
+    color:
+        rgba(0,255,255,.4);
+
+    font-size: 9px;
+}
+
+
+/*==================================================*
+ * NAV BUTTON
+ *==================================================*/
+
+.netCalc-nav {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    margin-bottom: 7px;
+
+    border:
+        1px solid
+        transparent;
+
+    background:
+        transparent;
+
+    color:
+        rgba(220,255,255,.7);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+}
+
+
+.netCalc-nav span {
+
+    width: 25px;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+
+.netCalc-nav strong {
+
+    font-size: 13px;
+}
+
+
+.netCalc-nav:hover {
+
+    border-color:
+        rgba(0,255,255,.2);
+
+    background:
+        rgba(0,255,255,.05);
+
+    color: #00ffff;
+
+    transform:
+        translateX(3px);
+}
+
+
+.netCalc-nav.active {
+
+    border-color:
+        rgba(0,255,255,.4);
+
+    background:
+        rgba(0,255,255,.09);
+
+    color: #00ffff;
+
+    box-shadow:
+        inset 3px 0 0
+        #00ffff;
+}
+
+
+/*==================================================*
+ * WORKSPACE
+ *==================================================*/
+
+.netCalc-workspace {
+
+    min-width: 0;
+
+    padding: 22px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.2);
+
+    background:
+        rgba(0,15,20,.82);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,255,255,.05);
+}
+
+
+/*==================================================*
+ * TOOL HEADER
+ *==================================================*/
+
+.netCalc-tool-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid
+        rgba(0,255,255,.12);
+}
+
+
+.netCalc-tool-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(0,255,255,.3);
+
+    color: #00ffff;
+
+    font-size: 25px;
+
+    background:
+        rgba(0,255,255,.05);
+
+    box-shadow:
+        0 0 15px
+        rgba(0,255,255,.08);
+}
+
+
+.netCalc-tool-header span {
+
+    color:
+        rgba(0,255,255,.5);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.netCalc-tool-header h2 {
+
+    margin: 4px 0;
+
+    color: #00ffff;
+
+    font-size: 24px;
+}
+
+
+.netCalc-tool-header p {
+
+    margin: 0;
+
+    color:
+        rgba(220,255,255,.55);
+}
+
+
+/*==================================================*
+ * FORM
+ *==================================================*/
+
+.netCalc-form {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.netCalc-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.netCalc-field label {
+
+    color:
+        rgba(220,255,255,.75);
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.netCalc-field input,
+.netCalc-select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.18);
+
+    outline: none;
+
+    background:
+        rgba(0,0,0,.3);
+
+    color: white;
+
+    font-size: 14px;
+
+    transition:
+        .25s ease;
+}
+
+
+.netCalc-field input:focus,
+.netCalc-select:focus {
+
+    border-color:
+        #00ffff;
+
+    box-shadow:
+        0 0 12px
+        rgba(0,255,255,.12);
+}
+
+
+.netCalc-select {
+
+    background:
+        #031316;
+
+    cursor: pointer;
+}
+
+
+/*==================================================*
+ * CALCULATE
+ *==================================================*/
+
+.netCalc-calculate {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid
+        #00ffff;
+
+    background:
+        rgba(0,255,255,.06);
+
+    color: #00ffff;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+}
+
+
+.netCalc-calculate:hover {
+
+    background:
+        #00ffff;
+
+    color:
+        #001010;
+
+    box-shadow:
+        0 0 20px
+        rgba(0,255,255,.4);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/*==================================================*
+ * RESULT
+ *==================================================*/
+
+.netCalc-result {
+
+    padding: 20px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.12);
+
+    background:
+        rgba(0,255,255,.025);
+}
+
+
+.netCalc-result-title {
+
+    margin-bottom: 18px;
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.netCalc-result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.netCalc-result-grid > div {
+
+    padding: 15px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.1);
+
+    background:
+        rgba(0,0,0,.2);
+}
+
+
+.netCalc-result-grid span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        rgba(0,255,255,.45);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.netCalc-result-grid strong {
+
+    color:
+        #dfffff;
+
+    font-size: 15px;
+
+    word-break: break-word;
+}
+
+
+/*==================================================*
+ * BINARY
+ *==================================================*/
+
+.netCalc-binary {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.12);
+}
+
+
+.netCalc-binary span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        rgba(0,255,255,.45);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.netCalc-binary strong {
+
+    color: #00ffff;
+
+    word-break: break-all;
+
+    font-family:
+        monospace;
+}
+
+
+/*==================================================*
+ * BIG RESULT
+ *==================================================*/
+
+.netCalc-big-result {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #00ffff;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 15px
+        rgba(0,255,255,.4);
+}
+
+
+.netCalc-big-result span {
+
+    font-size: 16px;
+
+    color:
+        rgba(0,255,255,.55);
+}
+
+
+/*==================================================*
+ * CONVERSION
+ *==================================================*/
+
+.netCalc-conversion {
+
+    text-align: center;
+
+    padding: 15px;
+
+    color:
+        rgba(220,255,255,.65);
+}
+
+
+.netCalc-conversion strong {
+
+    margin:
+        0 10px;
+
+    color: #00ffff;
+}
+
+
+/*==================================================*
+ * TABLE
+ *==================================================*/
+
+.netCalc-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.netCalc-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+}
+
+
+.netCalc-table th {
+
+    padding: 11px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.15);
+
+    color: #00ffff;
+
+    background:
+        rgba(0,255,255,.06);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.netCalc-table td {
+
+    padding: 10px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.08);
+
+    color:
+        rgba(220,255,255,.75);
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+.netCalc-table tr:hover td {
+
+    background:
+        rgba(0,255,255,.04);
+
+    color: #00ffff;
+}
+
+
+/*==================================================*
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 900px) {
+
+    .netCalc-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .netCalc-menu {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .netCalc-menu-header {
+
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+/*==================================================*
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 600px) {
+
+    .netCalc-container {
+
+        padding: 12px;
+    }
+
+
+    .netCalc-header {
+
+        padding: 18px;
+    }
+
+
+    .netCalc-header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .netCalc-menu {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .netCalc-form {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .netCalc-result-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .netCalc-tool-header {
+
+        align-items: flex-start;
+    }
+
+
+    .netCalc-tool-header h2 {
+
+        font-size: 20px;
+    }
+
+
+    .netCalc-workspace {
+
+        padding: 15px;
+    }
+
+
+    .netCalc-big-result {
+
+        font-size: 30px;
+    }
+
+}
+
+
+/*==================================================*
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .netCalc-container {
+
+        padding: 8px;
+    }
+
+
+    .netCalc-header h1 {
+
+        font-size: 20px;
+    }
+
+
+    .netCalc-workspace {
+
+        padding: 10px;
+    }
+
+}

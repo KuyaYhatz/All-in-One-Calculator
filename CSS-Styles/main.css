@@ -1,0 +1,1565 @@
+/*==================================================*
+ * ROOT
+ *==================================================*/
+
+:root {
+
+    --primary-color: #00ffff;
+    --dark-color: #012525;
+
+    --aqua: #00ffff;
+    --aqua-soft: #7fffff;
+
+    --bg-dark: #02090c;
+    --bg-panel: rgba(0, 20, 25, 0.92);
+
+    --border-aqua:
+        rgba(0, 255, 255, 0.18);
+
+    --glow-aqua:
+        rgba(0, 255, 255, 0.35);
+}
+
+
+/*==================================================*
+ * GLOBAL
+ *==================================================*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/*==================================================*
+ * HTML / BODY
+ *==================================================*/
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+body {
+
+    background-image:
+        url("../img/Dark-Aqua-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/*==================================================*
+ * MAIN APP
+ *==================================================*/
+
+.app {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/*==================================================*
+ * MAIN HEADER
+ *==================================================*/
+
+.main-header {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 70px;
+    min-height: 70px;
+
+    padding:
+        0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(1, 12, 16, 0.98),
+            rgba(0, 25, 30, 0.96),
+            rgba(1, 10, 14, 0.98)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.20);
+
+    color:
+        var(--primary-color);
+
+    box-shadow:
+
+        0 4px 25px
+        rgba(0, 255, 255, 0.08),
+
+        inset 0 -1px 0
+        rgba(0, 255, 255, 0.08);
+
+    z-index: 10000;
+
+    overflow: visible;
+}
+
+
+/*==================================================*
+ * HEADER TOP GLOW
+ *==================================================*/
+
+.main-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            aqua,
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px aqua;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+}
+
+
+/*==================================================*
+ * HEADER BOTTOM CYBER LINE
+ *==================================================*/
+
+.main-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #00ffff 20%,
+            #00ffff 50%,
+            #00ffff 80%,
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 8px aqua,
+        0 0 20px
+        rgba(0, 255, 255, 0.45);
+
+    pointer-events: none;
+}
+
+
+/*==================================================*
+ * HEADER LOGO
+ *==================================================*/
+
+.header-logo {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        7px 13px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 9px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    color:
+        var(--primary-color);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    text-shadow:
+
+        0 0 8px
+        rgba(0, 255, 255, 0.55);
+
+    transition:
+        0.3s ease;
+
+    z-index: 2;
+}
+
+
+/*==================================================*
+ * LOGO HOVER
+ *==================================================*/
+
+.header-logo:hover {
+
+    background:
+        rgba(0, 255, 255, 0.045);
+
+    border-color:
+        rgba(0, 255, 255, 0.25);
+
+    box-shadow:
+
+        0 0 15px
+        rgba(0, 255, 255, 0.10);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/*==================================================*
+ * HEADER LOGO IMAGE
+ *==================================================*/
+
+.header-logo img {
+
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    filter:
+
+        drop-shadow(
+            0 0 7px
+            rgba(0, 255, 255, 0.50)
+        );
+
+    transition:
+        0.3s ease;
+}
+
+
+/*==================================================*
+ * LOGO IMAGE HOVER
+ *==================================================*/
+
+.header-logo:hover img {
+
+    transform:
+        scale(1.05);
+
+    filter:
+
+        drop-shadow(
+            0 0 12px aqua
+        );
+}
+
+
+/*==================================================*
+ * LOGO TEXT
+ *==================================================*/
+
+.header-logo span {
+
+    white-space: nowrap;
+}
+
+
+/*==================================================*
+ * HEADER NAVIGATION
+ *==================================================*/
+
+.header-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-right: 5px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/*==================================================*
+ * NAVIGATION BUTTON
+ *==================================================*/
+
+.header-nav button {
+
+    position: relative;
+
+    min-width: 85px;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.13);
+
+    border-radius: 7px;
+
+    background:
+        rgba(0, 255, 255, 0.025);
+
+    color:
+        #c6e8ea;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        0.25s ease;
+}
+
+
+/*==================================================*
+ * NAVIGATION CYBER LINE
+ *==================================================*/
+
+.header-nav button::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        aqua;
+
+    box-shadow:
+        0 0 8px aqua;
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.3s ease;
+}
+
+
+/*==================================================*
+ * NAVIGATION HOVER
+ *==================================================*/
+
+.header-nav button:hover {
+
+    color:
+        aqua;
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    border-color:
+        rgba(0, 255, 255, 0.45);
+
+    box-shadow:
+
+        0 0 15px
+        rgba(0, 255, 255, 0.13);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.header-nav button:hover::after {
+
+    width: 70%;
+}
+
+
+/*==================================================*
+ * NAVIGATION ACTIVE
+ *==================================================*/
+
+.header-nav button:active {
+
+    transform:
+        translateY(0);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(0, 255, 255, 0.25);
+}
+
+
+/*==================================================*
+ * MOBILE HEADER MENU
+ * DEFAULT HIDDEN
+ *==================================================*/
+
+.mobile-header-menu {
+
+    display: none;
+
+    position: relative;
+}
+
+
+/*==================================================*
+ * MAIN AREA
+ *==================================================*/
+
+.main-area {
+
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/*==================================================*
+ * CANVAS
+ *==================================================*/
+
+#canvas {
+
+    flex: 1;
+
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    display: block;
+
+    overflow: auto;
+
+    color: white;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        aqua
+        rgba(0, 255, 255, 0.05);
+}
+
+
+/*==================================================*
+ * CANVAS SCROLLBAR
+ *==================================================*/
+
+#canvas::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+#canvas::-webkit-scrollbar-track {
+
+    background:
+        rgba(0, 255, 255, 0.035);
+}
+
+
+#canvas::-webkit-scrollbar-thumb {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #00ffff,
+            #008b8b
+        );
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.5);
+}
+
+
+#canvas::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #00ffff;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(0, 255, 255, 0.8);
+}
+
+
+/*==================================================*
+ * HAMBURGER BUTTON
+ *==================================================*/
+
+.menu-toggle {
+
+    display: flex;
+
+    position: fixed;
+
+    align-items: center;
+
+    justify-content: center;
+
+    top: 15px;
+    left: 15px;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.35);
+
+    border-radius: 10px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #00ffff,
+            #00a6a6
+        );
+
+    color:
+        #00191b;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 20000;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(0, 255, 255, 0.25);
+
+    transition:
+        0.25s ease;
+}
+
+
+/*==================================================*
+ * HAMBURGER HOVER
+ *==================================================*/
+
+.menu-toggle:hover {
+
+    background:
+        #00ffff;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(0, 255, 255, 0.65);
+
+    transform:
+        scale(1.05);
+}
+
+
+/*==================================================*
+ * OVERLAY
+ *==================================================*/
+
+.menu-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background:
+        rgba(0, 5, 7, 0.70);
+
+    backdrop-filter:
+        blur(3px);
+
+    z-index: 19998;
+}
+
+
+.menu-overlay.active {
+
+    display: block;
+}
+
+
+/*==================================================*
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 1024px) {
+
+    .main-header {
+
+        height: 65px;
+
+        min-height: 65px;
+
+        padding:
+            0 20px;
+    }
+
+
+    .header-logo {
+
+        font-size: 18px;
+
+        gap: 9px;
+    }
+
+
+    .header-logo img {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .header-nav {
+
+        gap: 5px;
+    }
+
+
+    .header-nav button {
+
+        min-width: 75px;
+
+        padding:
+            9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+
+        top: 15px;
+        left: 15px;
+
+        width: 50px;
+        height: 50px;
+    }
+
+
+    #canvas {
+
+        width: 100%;
+
+        padding: 20px;
+    }
+}
+
+
+/*==================================================*
+ * MOBILE
+ * 376px - 700px
+ *==================================================*/
+
+@media (max-width: 700px) {
+
+    .main-header {
+
+        height: 60px;
+
+        min-height: 60px;
+
+        padding:
+            0 15px;
+    }
+
+
+    .header-logo {
+
+        font-size: 16px;
+
+        gap: 8px;
+
+        padding-left: 55px;
+    }
+
+
+    .header-logo img {
+
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /*
+     * 3 MAIN HEADER BUTTONS HIDDEN
+     * MOBILE MENU WILL BE USED
+     */
+
+    .header-nav {
+
+        display: none;
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+
+        top: 10px;
+        left: 10px;
+
+        width: 45px;
+        height: 45px;
+
+        font-size: 24px;
+    }
+
+
+    #canvas {
+
+        padding:
+            15px;
+
+        padding-top:
+            80px;
+    }
+}
+
+
+/*==================================================*
+* SMALL PHONE / iPHONE SE
+* MAX WIDTH: 375px
+*==================================================*/
+
+@media (max-width: 375px) {
+
+    /*----------------------------------------------*
+     * HEADER
+     *----------------------------------------------*/
+
+    .main-header {
+
+        height: 55px;
+        min-height: 55px;
+
+        position: relative;
+
+        padding:
+            0 10px;
+
+        overflow: visible;
+    }
+
+
+    /*----------------------------------------------*
+     * HEADER LOGO
+     *----------------------------------------------*/
+
+    .header-logo {
+
+        font-size: 14px;
+
+        gap: 7px;
+
+        padding-left: 55px;
+
+        white-space: nowrap;
+    }
+
+
+    .header-logo img {
+
+        width: 31px;
+        height: 31px;
+    }
+
+
+    /*----------------------------------------------*
+     * DESKTOP HEADER NAVIGATION
+     * HIDDEN ON SMALL PHONE
+     *----------------------------------------------*/
+
+    .header-nav {
+
+        display: none !important;
+    }
+
+
+    /*================================================*
+     * MOBILE 3-DOTS MENU
+     * UPPER LEFT
+     *================================================*/
+
+    .mobile-header-menu {
+
+        display: block;
+
+        position: fixed;
+
+        top: 7px;
+        left: 8px;
+
+        right: auto;
+
+        width: 42px;
+
+        margin: 0;
+        padding: 0;
+
+        z-index: 30000;
+    }
+
+
+    /*----------------------------------------------*
+     * 3-DOTS BUTTON
+     *----------------------------------------------*/
+
+    .mobile-menu-button {
+
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        border:
+            1px solid
+            aqua;
+
+        border-radius: 10px;
+
+        background:
+            rgba(0, 20, 24, 0.97);
+
+        color:
+            aqua;
+
+        font-size: 28px;
+
+        font-weight: bold;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        user-select: none;
+
+        list-style: none;
+
+        box-shadow:
+
+            0 0 8px
+            rgba(0, 255, 255, 0.35),
+
+            inset 0 0 8px
+            rgba(0, 255, 255, 0.08);
+
+        transition:
+            all 0.25s ease;
+    }
+
+
+    /*----------------------------------------------*
+     * REMOVE DEFAULT DETAILS ARROW
+     *----------------------------------------------*/
+
+    .mobile-menu-button::-webkit-details-marker {
+
+        display: none;
+    }
+
+
+    .mobile-menu-button::marker {
+
+        display: none;
+    }
+
+
+    /*----------------------------------------------*
+     * 3-DOTS HOVER
+     *----------------------------------------------*/
+
+    .mobile-menu-button:hover {
+
+        background:
+            rgba(0, 255, 255, 0.15);
+
+        color:
+            #ffffff;
+
+        border-color:
+            aqua;
+
+        box-shadow:
+
+            0 0 15px
+            rgba(0, 255, 255, 0.7);
+
+        transform:
+            scale(1.04);
+    }
+
+
+    /*----------------------------------------------*
+     * 3-DOTS ACTIVE / OPEN
+     *----------------------------------------------*/
+
+    .mobile-header-menu[open]
+    .mobile-menu-button {
+
+        background:
+            aqua;
+
+        color:
+            #012525;
+
+        border-color:
+            aqua;
+
+        box-shadow:
+
+            0 0 18px
+            rgba(0, 255, 255, 0.9);
+    }
+
+
+    /*================================================*
+     * DROPDOWN
+     * ALSO STARTS FROM LEFT
+     *================================================*/
+
+    .mobile-header-dropdown {
+
+        position: absolute;
+
+        top: 48px;
+
+        left: 0;
+
+        right: auto;
+
+        width: 145px;
+
+        padding: 7px;
+
+        box-sizing: border-box;
+
+        background:
+            rgba(1, 12, 16, 0.98);
+
+        border:
+            1px solid
+            aqua;
+
+        border-radius: 10px;
+
+        box-shadow:
+
+            0 0 12px
+            rgba(0, 255, 255, 0.35),
+
+            0 0 30px
+            rgba(0, 255, 255, 0.12);
+
+        backdrop-filter:
+            blur(10px);
+
+        -webkit-backdrop-filter:
+            blur(10px);
+
+        animation:
+            mobileMenuOpen
+            0.2s ease;
+    }
+
+
+    /*----------------------------------------------*
+     * DROPDOWN BUTTONS
+     *----------------------------------------------*/
+
+    .mobile-header-dropdown button {
+
+        display: block;
+
+        width: 100%;
+
+        padding:
+            10px 12px;
+
+        margin:
+            3px 0;
+
+        border:
+            1px solid
+            transparent;
+
+        border-radius: 7px;
+
+        background:
+            transparent;
+
+        color:
+            #dfffff;
+
+        text-align:
+            left;
+
+        font-size:
+            14px;
+
+        font-weight:
+            bold;
+
+        cursor:
+            pointer;
+
+        transition:
+            all 0.2s ease;
+    }
+
+
+    /*----------------------------------------------*
+     * DROPDOWN BUTTON HOVER
+     *----------------------------------------------*/
+
+    .mobile-header-dropdown button:hover {
+
+        background:
+            rgba(0, 255, 255, 0.15);
+
+        border-color:
+            rgba(0, 255, 255, 0.5);
+
+        color:
+            aqua;
+
+        padding-left:
+            16px;
+
+        box-shadow:
+            inset 3px 0 0 aqua;
+    }
+
+
+    /*----------------------------------------------*
+     * CANVAS
+     *----------------------------------------------*/
+
+    #canvas {
+
+        padding:
+            10px;
+
+        padding-top:
+            65px;
+    }
+
+}
+
+
+/*==================================================*
+* MOBILE MENU ANIMATION
+*==================================================*/
+
+@keyframes mobileMenuOpen {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(-5px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+/*==================================================*
+* SMALL PHONE / iPHONE SE
+* MAX WIDTH: 375px
+*==================================================*/
+
+@media (max-width: 700px) {
+
+    /*----------------------------------------------*
+     * HEADER
+     *----------------------------------------------*/
+
+    .main-header {
+
+        height: 55px;
+        min-height: 55px;
+
+        position: relative;
+
+        padding:
+            0 10px;
+
+        overflow: visible;
+    }
+
+
+    /*----------------------------------------------*
+     * HEADER LOGO
+     *----------------------------------------------*/
+
+    .header-logo {
+
+        font-size: 14px;
+
+        gap: 7px;
+
+        padding-left: 55px;
+
+        white-space: nowrap;
+    }
+
+
+    .header-logo img {
+
+        width: 31px;
+        height: 31px;
+    }
+
+
+    /*----------------------------------------------*
+     * DESKTOP HEADER NAVIGATION
+     * HIDDEN ON SMALL PHONE
+     *----------------------------------------------*/
+
+    .header-nav {
+
+        display: none !important;
+    }
+
+
+    /*================================================*
+     * MOBILE 3-DOTS MENU
+     * UPPER LEFT
+     *================================================*/
+
+    .mobile-header-menu {
+
+        display: block;
+
+        position: fixed;
+
+        top: 7px;
+        left: 8px;
+
+        right: auto;
+
+        width: 42px;
+
+        margin: 0;
+        padding: 0;
+
+        z-index: 30000;
+    }
+
+
+    /*----------------------------------------------*
+     * 3-DOTS BUTTON
+     *----------------------------------------------*/
+
+    .mobile-menu-button {
+
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        border:
+            1px solid
+            aqua;
+
+        border-radius: 10px;
+
+        background:
+            rgba(0, 20, 24, 0.97);
+
+        color:
+            aqua;
+
+        font-size: 28px;
+
+        font-weight: bold;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        user-select: none;
+
+        list-style: none;
+
+        box-shadow:
+
+            0 0 8px
+            rgba(0, 255, 255, 0.35),
+
+            inset 0 0 8px
+            rgba(0, 255, 255, 0.08);
+
+        transition:
+            all 0.25s ease;
+    }
+
+
+    /*----------------------------------------------*
+     * REMOVE DEFAULT DETAILS ARROW
+     *----------------------------------------------*/
+
+    .mobile-menu-button::-webkit-details-marker {
+
+        display: none;
+    }
+
+
+    .mobile-menu-button::marker {
+
+        display: none;
+    }
+
+
+    /*----------------------------------------------*
+     * 3-DOTS HOVER
+     *----------------------------------------------*/
+
+    .mobile-menu-button:hover {
+
+        background:
+            rgba(0, 255, 255, 0.15);
+
+        color:
+            #ffffff;
+
+        border-color:
+            aqua;
+
+        box-shadow:
+
+            0 0 15px
+            rgba(0, 255, 255, 0.7);
+
+        transform:
+            scale(1.04);
+    }
+
+
+    /*----------------------------------------------*
+     * 3-DOTS ACTIVE / OPEN
+     *----------------------------------------------*/
+
+    .mobile-header-menu[open]
+    .mobile-menu-button {
+
+        background:
+            aqua;
+
+        color:
+            #012525;
+
+        border-color:
+            aqua;
+
+        box-shadow:
+
+            0 0 18px
+            rgba(0, 255, 255, 0.9);
+    }
+
+
+    /*================================================*
+     * DROPDOWN
+     * ALSO STARTS FROM LEFT
+     *================================================*/
+
+    .mobile-header-dropdown {
+
+        position: absolute;
+
+        top: 48px;
+
+        left: 0;
+
+        right: auto;
+
+        width: 145px;
+
+        padding: 7px;
+
+        box-sizing: border-box;
+
+        background:
+            rgba(1, 12, 16, 0.98);
+
+        border:
+            1px solid
+            aqua;
+
+        border-radius: 10px;
+
+        box-shadow:
+
+            0 0 12px
+            rgba(0, 255, 255, 0.35),
+
+            0 0 30px
+            rgba(0, 255, 255, 0.12);
+
+        backdrop-filter:
+            blur(10px);
+
+        -webkit-backdrop-filter:
+            blur(10px);
+
+        animation:
+            mobileMenuOpen
+            0.2s ease;
+    }
+
+
+    /*----------------------------------------------*
+     * DROPDOWN BUTTONS
+     *----------------------------------------------*/
+
+    .mobile-header-dropdown button {
+
+        display: block;
+
+        width: 100%;
+
+        padding:
+            10px 12px;
+
+        margin:
+            3px 0;
+
+        border:
+            1px solid
+            transparent;
+
+        border-radius: 7px;
+
+        background:
+            transparent;
+
+        color:
+            #dfffff;
+
+        text-align:
+            left;
+
+        font-size:
+            14px;
+
+        font-weight:
+            bold;
+
+        cursor:
+            pointer;
+
+        transition:
+            all 0.2s ease;
+    }
+
+
+    /*----------------------------------------------*
+     * DROPDOWN BUTTON HOVER
+     *----------------------------------------------*/
+
+    .mobile-header-dropdown button:hover {
+
+        background:
+            rgba(0, 255, 255, 0.15);
+
+        border-color:
+            rgba(0, 255, 255, 0.5);
+
+        color:
+            aqua;
+
+        padding-left:
+            16px;
+
+        box-shadow:
+            inset 3px 0 0 aqua;
+    }
+
+
+    /*----------------------------------------------*
+     * CANVAS
+     *----------------------------------------------*/
+
+    #canvas {
+
+        padding:
+            10px;
+
+        padding-top:
+            65px;
+    }
+
+}
+
+
+/*==================================================*
+* MOBILE MENU ANIMATION
+*==================================================*/
+
+@keyframes mobileMenuOpen {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(-5px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}

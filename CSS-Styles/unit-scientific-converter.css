@@ -1,0 +1,1482 @@
+/*==================================================
+ * UNIT & SCIENTIFIC CONVERTER
+ * FUTURISTIC AQUA DESIGN
+ *
+ * UNIQUE PREFIX:
+ * usc-
+ *==================================================*/
+
+
+/*==================================================
+ * ROOT
+ *==================================================*/
+
+:root {
+
+    --usc-aqua:
+        #00ffff;
+
+    --usc-aqua-light:
+        #8fffff;
+
+    --usc-aqua-dark:
+        #008f8f;
+
+    --usc-cyan:
+        #00d9ff;
+
+    --usc-bg:
+        #02080c;
+
+    --usc-panel:
+        rgba(3, 20, 25, 0.92);
+
+    --usc-panel-light:
+        rgba(0, 255, 255, 0.055);
+
+    --usc-border:
+        rgba(0, 255, 255, 0.30);
+
+    --usc-border-strong:
+        rgba(0, 255, 255, 0.70);
+
+    --usc-text:
+        #eaffff;
+
+    --usc-muted:
+        #79a9aa;
+
+}
+
+
+/*==================================================
+ * MAIN CONTAINER
+ *==================================================*/
+
+.usc-container {
+
+    width: 100%;
+
+    min-height: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color:
+        var(--usc-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 255, 0.08),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(0, 255, 255, 0.05),
+            transparent 30%
+        );
+
+}
+
+
+/*==================================================
+ * HEADER
+ *==================================================*/
+
+.usc-header {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    padding: 22px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 255, 0.09),
+            rgba(0, 10, 15, 0.85)
+        );
+
+    border:
+        1px solid
+        var(--usc-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(0, 255, 255, 0.07),
+
+        inset 0 0 25px
+        rgba(0, 255, 255, 0.025);
+
+    overflow: hidden;
+
+}
+
+
+/*==================================================
+ * HEADER SCAN LINE
+ *==================================================*/
+
+.usc-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--usc-aqua),
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px
+        var(--usc-aqua);
+
+}
+
+
+/*==================================================
+ * BADGE
+ *==================================================*/
+
+.usc-system-badge {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding: 5px 10px;
+
+    border:
+        1px solid
+        var(--usc-border);
+
+    border-radius: 4px;
+
+    color:
+        var(--usc-aqua);
+
+    background:
+        rgba(0, 255, 255, 0.05);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/*==================================================
+ * TITLE
+ *==================================================*/
+
+.usc-title {
+
+    margin: 0;
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+
+        0 0 8px
+        rgba(0, 255, 255, 0.65),
+
+        0 0 20px
+        rgba(0, 255, 255, 0.25);
+
+}
+
+
+/*==================================================
+ * SUBTITLE
+ *==================================================*/
+
+.usc-subtitle {
+
+    max-width: 800px;
+
+    margin: 8px 0 0;
+
+    color:
+        var(--usc-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/*==================================================
+ * HEADER STATUS
+ *==================================================*/
+
+.usc-header-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    border:
+        1px solid
+        var(--usc-border);
+
+    border-radius: 5px;
+
+    color:
+        var(--usc-aqua);
+
+    background:
+        rgba(0, 255, 255, 0.04);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+}
+
+
+.usc-status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        var(--usc-aqua);
+
+    box-shadow:
+        0 0 10px
+        var(--usc-aqua);
+
+    animation:
+        uscPulse 1.5s infinite;
+
+}
+
+
+/*==================================================
+ * MAIN LAYOUT
+ *==================================================*/
+
+.usc-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        245px
+        minmax(0, 1fr);
+
+    gap: 20px;
+
+    min-height: 500px;
+
+}
+
+
+/*==================================================
+ * SIDEBAR
+ *==================================================*/
+
+.usc-sidebar {
+
+    min-width: 0;
+
+    padding: 14px;
+
+    background:
+        rgba(2, 15, 19, 0.94);
+
+    border:
+        1px solid
+        var(--usc-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.05);
+
+}
+
+
+/*==================================================
+ * SIDEBAR HEADER
+ *==================================================*/
+
+.usc-sidebar-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding:
+        8px
+        8px
+        15px;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+}
+
+
+.usc-sidebar-title {
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.usc-module-count {
+
+    color:
+        var(--usc-muted);
+
+    font-size: 9px;
+
+}
+
+
+/*==================================================
+ * CATEGORY LIST
+ *==================================================*/
+
+.usc-category-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-top: 12px;
+
+}
+
+
+/*==================================================
+ * CATEGORY BUTTON
+ *==================================================*/
+
+.usc-category-btn {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    min-height: 43px;
+
+    padding:
+        9px
+        12px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 7px;
+
+    background:
+        rgba(0, 255, 255, 0.015);
+
+    color:
+        #b7d9da;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.usc-category-icon {
+
+    width: 25px;
+
+    text-align: center;
+
+    font-size: 17px;
+
+}
+
+
+.usc-category-btn:hover {
+
+    color:
+        var(--usc-aqua);
+
+    background:
+        rgba(0, 255, 255, 0.06);
+
+    border-color:
+        var(--usc-border);
+
+    transform:
+        translateX(3px);
+
+}
+
+
+.usc-category-btn.active {
+
+    color:
+        var(--usc-aqua);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.13),
+            rgba(0, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid
+        var(--usc-border-strong);
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+.usc-category-btn.active::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -1px;
+
+    top: 7px;
+
+    bottom: 7px;
+
+    width: 3px;
+
+    border-radius: 3px;
+
+    background:
+        var(--usc-aqua);
+
+    box-shadow:
+        0 0 10px
+        var(--usc-aqua);
+
+}
+
+
+/*==================================================
+ * WORKSPACE
+ *==================================================*/
+
+.usc-workspace {
+
+    min-width: 0;
+
+}
+
+
+/*==================================================
+ * CONVERTER CARD
+ *==================================================*/
+
+.usc-converter-card {
+
+    position: relative;
+
+    min-height: 500px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(3, 22, 27, 0.97),
+            rgba(1, 8, 11, 0.97)
+        );
+
+    border:
+        1px solid
+        var(--usc-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+
+        0 0 30px
+        rgba(0, 255, 255, 0.055),
+
+        inset 0 0 40px
+        rgba(0, 255, 255, 0.018);
+
+    overflow: hidden;
+
+}
+
+
+/*==================================================
+ * CATEGORY HEADER
+ *==================================================*/
+
+.usc-category-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 22px;
+
+    margin-bottom: 25px;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+}
+
+
+.usc-category-symbol {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        var(--usc-border-strong);
+
+    border-radius: 12px;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+
+    font-size: 30px;
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+.usc-category-label {
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.usc-category-info h2 {
+
+    margin:
+        4px
+        0;
+
+    color:
+        #ffffff;
+
+    font-size: 24px;
+
+}
+
+
+.usc-category-info p {
+
+    margin: 0;
+
+    color:
+        var(--usc-muted);
+
+    font-size: 13px;
+
+}
+
+
+/*==================================================
+ * CONVERTER GRID
+ *==================================================*/
+
+.usc-converter-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        70px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+/*==================================================
+ * VALUE PANEL
+ *==================================================*/
+
+.usc-value-panel {
+
+    padding: 18px;
+
+    background:
+        rgba(0, 255, 255, 0.025);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+}
+
+
+.usc-panel-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/*==================================================
+ * INPUT
+ *==================================================*/
+
+.usc-value-input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding:
+        0
+        14px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    transition:
+        0.25s;
+
+}
+
+
+.usc-value-input:focus {
+
+    border-color:
+        var(--usc-aqua);
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.15);
+
+}
+
+
+.usc-result-input {
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.3);
+
+}
+
+
+/*==================================================
+ * SELECT
+ *==================================================*/
+
+.usc-unit-select {
+
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 10px;
+
+    padding:
+        0
+        12px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background:
+        #041317;
+
+    color:
+        #cfffff;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.usc-unit-select:focus {
+
+    border-color:
+        var(--usc-aqua);
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.12);
+
+}
+
+
+.usc-unit-select option {
+
+    background:
+        #041317;
+
+    color:
+        #ffffff;
+
+}
+
+
+/*==================================================
+ * SWAP
+ *==================================================*/
+
+.usc-swap-panel {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.usc-swap-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 54px;
+
+    height: 54px;
+
+    border:
+        1px solid
+        var(--usc-border-strong);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+    transition:
+        0.3s;
+
+}
+
+
+.usc-swap-button:hover {
+
+    background:
+        var(--usc-aqua);
+
+    color:
+        #001416;
+
+    transform:
+        rotate(180deg);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.35);
+
+}
+
+
+/*==================================================
+ * RESULT PANEL
+ *==================================================*/
+
+.usc-result-panel {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+    padding: 18px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.08),
+            rgba(0, 255, 255, 0.025)
+        );
+
+    border-left:
+        3px solid
+        var(--usc-aqua);
+
+    border-top:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-right:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-radius: 6px;
+
+}
+
+
+.usc-result-label {
+
+    color:
+        var(--usc-muted);
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.usc-result-panel strong {
+
+    margin-left: auto;
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 24px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, 0.35);
+
+}
+
+
+.usc-result-unit {
+
+    color:
+        #9bd8d9;
+
+    font-size: 12px;
+
+}
+
+
+/*==================================================
+ * CONVERT BUTTON
+ *==================================================*/
+
+.usc-convert-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 18px;
+
+    border:
+        1px solid
+        var(--usc-aqua);
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.13),
+            rgba(0, 255, 255, 0.04)
+        );
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        0.25s;
+
+}
+
+
+.usc-convert-button:hover {
+
+    background:
+        var(--usc-aqua);
+
+    color:
+        #001719;
+
+    box-shadow:
+        0 0 22px
+        rgba(0, 255, 255, 0.25);
+
+}
+
+
+/*==================================================
+ * SYSTEM PANEL
+ *==================================================*/
+
+.usc-system-panel {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+}
+
+
+.usc-system-panel > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 11px 13px;
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.10);
+
+    border-radius: 6px;
+
+}
+
+
+.usc-system-label {
+
+    color:
+        #577d7e;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.usc-system-panel strong {
+
+    color:
+        var(--usc-aqua);
+
+    font-size: 11px;
+
+}
+
+
+/*==================================================
+ * ERROR
+ *==================================================*/
+
+.usc-error-panel {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 300px;
+
+    border:
+        1px solid
+        rgba(255, 70, 70, 0.4);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 0, 0, 0.04);
+
+    color:
+        #ff7777;
+
+    font-weight: bold;
+
+}
+
+
+/*==================================================
+ * ANIMATION
+ *==================================================*/
+
+@keyframes uscPulse {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.45;
+
+        transform:
+            scale(0.75);
+
+    }
+
+}
+
+
+/*==================================================
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 1000px) {
+
+    .usc-layout {
+
+        grid-template-columns:
+            200px
+            minmax(0, 1fr);
+
+    }
+
+
+    .usc-title {
+
+        font-size: 23px;
+
+    }
+
+
+    .usc-converter-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .usc-swap-panel {
+
+        order: 2;
+
+    }
+
+
+    .usc-value-panel:first-child {
+
+        order: 1;
+
+    }
+
+
+    .usc-value-panel:last-child {
+
+        order: 3;
+
+    }
+
+
+    .usc-swap-button {
+
+        transform:
+            rotate(90deg);
+
+    }
+
+
+    .usc-swap-button:hover {
+
+        transform:
+            rotate(270deg);
+
+    }
+
+}
+
+
+/*==================================================
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 700px) {
+
+    .usc-container {
+
+        padding: 12px;
+
+    }
+
+
+    .usc-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 18px;
+
+    }
+
+
+    .usc-header-status {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        justify-content: center;
+
+    }
+
+
+    .usc-title {
+
+        font-size: 20px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .usc-subtitle {
+
+        font-size: 12px;
+
+    }
+
+
+    .usc-layout {
+
+        display: block;
+
+    }
+
+
+    .usc-sidebar {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .usc-category-list {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        max-height: 250px;
+
+        overflow-y: auto;
+
+    }
+
+
+    .usc-category-btn {
+
+        min-height: 42px;
+
+        font-size: 11px;
+
+    }
+
+
+    .usc-converter-card {
+
+        padding: 17px;
+
+    }
+
+
+    .usc-category-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .usc-category-symbol {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 23px;
+
+    }
+
+
+    .usc-category-info h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .usc-category-info p {
+
+        font-size: 11px;
+
+    }
+
+
+    .usc-system-panel {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .usc-result-panel {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .usc-result-panel strong {
+
+        margin-left: 0;
+
+        width: 100%;
+
+    }
+
+}
+
+
+/*==================================================
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .usc-container {
+
+        padding: 8px;
+
+    }
+
+
+    .usc-header {
+
+        padding: 14px;
+
+    }
+
+
+    .usc-title {
+
+        font-size: 17px;
+
+    }
+
+
+    .usc-system-badge {
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .usc-category-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .usc-converter-card {
+
+        padding: 13px;
+
+    }
+
+
+    .usc-value-panel {
+
+        padding: 13px;
+
+    }
+
+}

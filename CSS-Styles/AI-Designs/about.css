@@ -1,0 +1,832 @@
+/*==================================================
+ * ABOUT PAGE
+ * FUTURISTIC AQUA DESIGN
+ * UNIQUE PREFIX: aio-about-
+ *==================================================*/
+
+.aio-about-page {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 255, 0.12),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(0, 255, 255, 0.05),
+            transparent 30%
+        ),
+
+        #02080c;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/*==================================================
+ * GRID BACKGROUND
+ *==================================================*/
+
+.aio-about-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+}
+
+
+/*==================================================
+ * HERO
+ *==================================================*/
+
+.aio-about-hero {
+
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 0 auto 45px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.25);
+
+    background:
+        rgba(0, 20, 25, 0.72);
+
+    box-shadow:
+
+        0 0 30px
+        rgba(0, 255, 255, 0.07),
+
+        inset 0 0 30px
+        rgba(0, 255, 255, 0.025);
+
+    clip-path:
+        polygon(
+            0 0,
+            calc(100% - 20px) 0,
+            100% 20px,
+            100% 100%,
+            20px 100%,
+            0 calc(100% - 20px)
+        );
+}
+
+
+/*==================================================
+ * BADGE
+ *==================================================*/
+
+.aio-about-badge {
+
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.5);
+
+    background:
+        rgba(0, 255, 255, 0.06);
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.08);
+}
+
+
+/*==================================================
+ * HERO TITLE
+ *==================================================*/
+
+.aio-about-hero h1 {
+
+    margin: 0;
+
+    font-size: clamp(32px, 5vw, 65px);
+
+    letter-spacing: 5px;
+
+    font-weight: 900;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 255, 0.5),
+        0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+
+.aio-about-hero h1 span {
+
+    color: #00ffff;
+
+}
+
+
+.aio-about-hero p {
+
+    max-width: 750px;
+
+    margin: 20px auto;
+
+    color: #9ecaca;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/*==================================================
+ * SYSTEM STATUS
+ *==================================================*/
+
+.aio-about-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.aio-about-status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #00ffff;
+
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px #00ffff;
+
+    animation:
+        aio-about-pulse 1.5s infinite;
+}
+
+
+@keyframes aio-about-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+}
+
+
+/*==================================================
+ * SECTION
+ *==================================================*/
+
+.aio-about-section {
+
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 0 auto 50px;
+}
+
+
+/*==================================================
+ * SECTION TITLE
+ *==================================================*/
+
+.aio-about-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+
+.aio-about-section-number {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #00ffff;
+
+    color: #00ffff;
+
+    background:
+        rgba(0, 255, 255, 0.06);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.08);
+}
+
+
+.aio-about-section-title small {
+
+    color: #00ffff;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.aio-about-section-title h2 {
+
+    margin: 5px 0 0;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+}
+
+
+/*==================================================
+ * GENERAL CARD
+ *==================================================*/
+
+.aio-about-card {
+
+    padding: 25px;
+
+    border-left: 3px solid #00ffff;
+
+    border-top: 1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-right: 1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-bottom: 1px solid
+        rgba(0, 255, 255, 0.15);
+
+    background:
+        rgba(0, 25, 30, 0.65);
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0, 255, 255, 0.025);
+}
+
+
+.aio-about-card p {
+
+    margin: 0;
+
+    color: #b5dede;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/*==================================================
+ * FEATURE GRID
+ *==================================================*/
+
+.aio-about-feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/*==================================================
+ * FEATURE CARD
+ *==================================================*/
+
+.aio-about-feature-card {
+
+    position: relative;
+
+    padding: 23px;
+
+    min-height: 150px;
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.14);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 255, 0.055),
+            rgba(0, 10, 15, 0.75)
+        );
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.aio-about-feature-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(0, 255, 255, 0.6);
+
+    box-shadow:
+        0 0 22px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+.aio-about-feature-card > span {
+
+    color: #00ffff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+.aio-about-feature-card h3 {
+
+    margin:
+        10px 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+.aio-about-feature-card p {
+
+    margin: 0;
+
+    color: #91baba;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/*==================================================
+ * PURPOSE
+ *==================================================*/
+
+.aio-about-purpose {
+
+    padding: 30px;
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.18);
+
+    background:
+        rgba(0, 255, 255, 0.025);
+
+}
+
+
+.aio-about-purpose-icon {
+
+    color: #00ffff;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 15px #00ffff;
+}
+
+
+.aio-about-purpose p {
+
+    color: #a9cece;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/*==================================================
+ * PRIVACY
+ *==================================================*/
+
+.aio-about-privacy {
+
+    padding: 28px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    background:
+        rgba(0, 15, 20, 0.7);
+}
+
+
+.aio-about-privacy-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.aio-about-privacy-status span {
+
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+
+.aio-about-privacy p {
+
+    color: #9ec4c4;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/*==================================================
+ * DEVELOPER
+ *==================================================*/
+
+.aio-about-developer {
+
+    max-width: 1100px;
+
+    margin: 70px auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+
+.aio-about-developer-line {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(0, 255, 255, 0.45),
+            transparent
+        );
+}
+
+
+.aio-about-developer-content {
+
+    min-width: 280px;
+}
+
+
+.aio-about-developer-label {
+
+    color: #6f9b9b;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.aio-about-developer-content h2 {
+
+    margin: 10px 0;
+
+    color: #00ffff;
+
+    font-size: 28px;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.45);
+}
+
+
+.aio-about-developer-version {
+
+    color: #91bebe;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.aio-about-developer-version b {
+
+    color: #00ffff;
+
+    margin-left: 8px;
+}
+
+
+.aio-about-developer-content p {
+
+    margin-top: 15px;
+
+    color: #557979;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/*==================================================
+ * SCROLLBAR
+ *==================================================*/
+
+.aio-about-page::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+.aio-about-page::-webkit-scrollbar-track {
+
+    background: #02080c;
+}
+
+
+.aio-about-page::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(0, 255, 255, 0.35);
+
+    border-radius: 10px;
+}
+
+
+.aio-about-page::-webkit-scrollbar-thumb:hover {
+
+    background: #00ffff;
+}
+
+
+/*==================================================
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 900px) {
+
+    .aio-about-page {
+
+        padding: 25px;
+    }
+
+
+    .aio-about-feature-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/*==================================================
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 700px) {
+
+    .aio-about-page {
+
+        padding: 15px;
+    }
+
+
+    .aio-about-hero {
+
+        padding: 35px 20px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .aio-about-hero h1 {
+
+        font-size: 30px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .aio-about-hero p {
+
+        font-size: 13px;
+    }
+
+
+    .aio-about-section-title h2 {
+
+        font-size: 21px;
+    }
+
+
+    .aio-about-section-number {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .aio-about-feature-card {
+
+        padding: 20px;
+    }
+
+
+    .aio-about-developer {
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .aio-about-developer-line {
+
+        width: 80%;
+
+        flex: none;
+    }
+
+}
+
+
+/*==================================================
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .aio-about-page {
+
+        padding: 10px;
+    }
+
+
+    .aio-about-hero {
+
+        padding: 28px 15px;
+    }
+
+
+    .aio-about-hero h1 {
+
+        font-size: 25px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .aio-about-section-title {
+
+        gap: 10px;
+    }
+
+
+    .aio-about-section-title h2 {
+
+        font-size: 18px;
+    }
+
+
+    .aio-about-card,
+    .aio-about-purpose,
+    .aio-about-privacy {
+
+        padding: 18px;
+    }
+
+}

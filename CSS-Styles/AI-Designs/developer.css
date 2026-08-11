@@ -1,0 +1,1011 @@
+/*==================================================
+ * DEVELOPER PROFILE
+ * FUTURISTIC AQUA DESIGN
+ *==================================================*/
+
+.dev-profile-page {
+
+    --dev-aqua: #00ffff;
+    --dev-aqua-soft: rgba(0, 255, 255, 0.12);
+    --dev-aqua-glow: rgba(0, 255, 255, 0.45);
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    color: #eaffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 255, 0.10),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(0, 255, 255, 0.05),
+            transparent 30%
+        );
+
+}
+
+
+/*==================================================
+ * HERO
+ *==================================================*/
+
+.dev-profile-hero {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 25px 20px 45px;
+
+    box-sizing: border-box;
+
+}
+
+
+/*==================================================
+ * STATUS
+ *==================================================*/
+
+.dev-profile-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.35);
+
+    border-radius: 30px;
+
+    background:
+        rgba(0, 255, 255, 0.06);
+
+    color:
+        var(--dev-aqua);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+/*==================================================
+ * STATUS DOT
+ *==================================================*/
+
+.dev-profile-status-dot {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        var(--dev-aqua);
+
+    box-shadow:
+        0 0 10px
+        var(--dev-aqua);
+
+    animation:
+        devStatusPulse 1.5s infinite;
+
+}
+
+
+@keyframes devStatusPulse {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.4;
+
+        transform: scale(0.7);
+
+    }
+
+}
+
+
+/*==================================================
+ * PROFILE PHOTO
+ *==================================================*/
+
+.dev-profile-photo-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.dev-profile-photo-ring {
+
+    width: 175px;
+    height: 175px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00ffff,
+            transparent 40%,
+            #00ffff
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.45),
+
+        0 0 45px
+        rgba(0, 255, 255, 0.12);
+
+    animation:
+        devPhotoGlow 3s ease-in-out infinite;
+
+}
+
+
+.dev-profile-photo {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border: 4px solid
+        #02090d;
+
+    background:
+        #02090d;
+
+}
+
+
+@keyframes devPhotoGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 15px
+            rgba(0, 255, 255, 0.35);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 30px
+            rgba(0, 255, 255, 0.65);
+
+    }
+
+}
+
+
+/*==================================================
+ * NAME
+ *==================================================*/
+
+.dev-profile-name {
+
+    margin: 0;
+
+    color:
+        var(--dev-aqua);
+
+    font-size: clamp(
+        32px,
+        5vw,
+        52px
+    );
+
+    font-weight: 800;
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, 0.55),
+
+        0 0 30px
+        rgba(0, 255, 255, 0.18);
+
+}
+
+
+/*==================================================
+ * TITLE
+ *==================================================*/
+
+.dev-profile-title {
+
+    margin:
+        10px 0 8px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(16px, 2vw, 22px);
+
+    font-weight: 500;
+
+}
+
+
+/*==================================================
+ * TAGLINE
+ *==================================================*/
+
+.dev-profile-tagline {
+
+    margin: 0;
+
+    color:
+        rgba(220, 255, 255, 0.65);
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.dev-profile-tagline span {
+
+    color:
+        var(--dev-aqua);
+
+    margin:
+        0 8px;
+
+}
+
+
+/*==================================================
+ * SECTION
+ *==================================================*/
+
+.dev-profile-section {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin:
+        0 auto 30px;
+
+}
+
+
+/*==================================================
+ * SECTION TITLE
+ *==================================================*/
+
+.dev-profile-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color:
+        var(--dev-aqua);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.dev-profile-section-icon {
+
+    font-size: 10px;
+
+    color:
+        var(--dev-aqua);
+
+    text-shadow:
+        0 0 10px
+        var(--dev-aqua);
+
+}
+
+
+/*==================================================
+ * ABOUT CARD
+ *==================================================*/
+
+.dev-profile-card {
+
+    padding: 25px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.18);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 255, 0.06),
+            rgba(0, 0, 0, 0.28)
+        );
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0, 255, 255, 0.025);
+
+}
+
+
+.dev-profile-card p {
+
+    margin:
+        0 0 16px;
+
+    color:
+        rgba(235, 255, 255, 0.78);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.dev-profile-card p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.dev-profile-card strong {
+
+    color:
+        var(--dev-aqua);
+
+}
+
+
+/*==================================================
+ * SKILLS GRID
+ *==================================================*/
+
+.dev-profile-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 12px;
+
+}
+
+
+.dev-profile-skill {
+
+    padding: 16px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-left:
+        3px solid
+        var(--dev-aqua);
+
+    background:
+        rgba(0, 255, 255, 0.035);
+
+    color: #eaffff;
+
+    border-radius: 8px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dev-profile-skill span {
+
+    margin-right: 12px;
+
+    color:
+        var(--dev-aqua);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.dev-profile-skill:hover {
+
+    transform:
+        translateX(5px);
+
+    border-color:
+        rgba(0, 255, 255, 0.45);
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+/*==================================================
+ * TECHNOLOGY TAGS
+ *==================================================*/
+
+.dev-profile-tech-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.dev-profile-tech-grid span {
+
+    padding:
+        10px 15px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.22);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0, 255, 255, 0.045);
+
+    color:
+        #dfffff;
+
+    font-size: 13px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dev-profile-tech-grid span:hover {
+
+    color:
+        var(--dev-aqua);
+
+    border-color:
+        var(--dev-aqua);
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.15);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/*==================================================
+ * TOOLS
+ *==================================================*/
+
+.dev-profile-tools {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap: 12px;
+
+}
+
+
+.dev-profile-tool {
+
+    padding: 18px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 0, 0, 0.22);
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dev-profile-tool strong {
+
+    display: block;
+
+    color:
+        var(--dev-aqua);
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.dev-profile-tool small {
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+}
+
+
+.dev-profile-tool:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(0, 255, 255, 0.5);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+/*==================================================
+ * SOCIAL MEDIA
+ *==================================================*/
+
+.dev-profile-social-section {
+
+    text-align: center;
+
+}
+
+
+.dev-profile-social-section
+.dev-profile-section-title {
+
+    justify-content: center;
+
+}
+
+
+.dev-profile-social-description {
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/*==================================================
+ * SOCIAL ICON CONTAINER
+ *==================================================*/
+
+.dev-profile-socials {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+}
+
+
+/*==================================================
+ * SOCIAL ICON
+ *==================================================*/
+
+.dev-social-link {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.22);
+
+    border-radius: 12px;
+
+    background:
+        rgba(0, 255, 255, 0.045);
+
+    transition:
+        0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.dev-social-link::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent,
+            rgba(0, 255, 255, 0.15),
+            transparent
+        );
+
+    transform:
+        translateX(-100%);
+
+    transition:
+        0.4s ease;
+
+}
+
+
+.dev-social-link:hover::before {
+
+    transform:
+        translateX(100%);
+
+}
+
+
+.dev-social-link img {
+
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 1;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.dev-social-link:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        var(--dev-aqua);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.25);
+
+}
+
+
+.dev-social-link:hover img {
+
+    transform:
+        scale(1.12);
+
+}
+
+
+/*==================================================
+ * END
+ *==================================================*/
+
+.dev-profile-end {
+
+    max-width: 1100px;
+
+    margin:
+        50px auto 10px;
+
+    text-align: center;
+
+}
+
+
+.dev-profile-end-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 255, 255, 0.5),
+            transparent
+        );
+
+}
+
+
+.dev-profile-end span {
+
+    display: block;
+
+    color:
+        var(--dev-aqua);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.dev-profile-end small {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/*==================================================
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 700px) {
+
+    .dev-profile-page {
+
+        padding: 20px 15px 40px;
+
+    }
+
+
+    .dev-profile-hero {
+
+        padding:
+            15px 10px 35px;
+
+    }
+
+
+    .dev-profile-photo-ring {
+
+        width: 135px;
+        height: 135px;
+
+    }
+
+
+    .dev-profile-name {
+
+        font-size: 30px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .dev-profile-title {
+
+        font-size: 15px;
+
+    }
+
+
+    .dev-profile-tagline {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .dev-profile-card {
+
+        padding: 18px;
+
+    }
+
+
+    .dev-profile-card p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .dev-profile-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dev-profile-tools {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dev-social-link {
+
+        width: 52px;
+        height: 52px;
+
+    }
+
+
+    .dev-social-link img {
+
+        width: 27px;
+        height: 27px;
+
+    }
+
+}
+
+
+/*==================================================
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .dev-profile-page {
+
+        padding:
+            15px 10px 30px;
+
+    }
+
+
+    .dev-profile-photo-ring {
+
+        width: 115px;
+        height: 115px;
+
+    }
+
+
+    .dev-profile-name {
+
+        font-size: 26px;
+
+    }
+
+
+    .dev-profile-title {
+
+        font-size: 14px;
+
+    }
+
+
+    .dev-profile-card {
+
+        padding: 15px;
+
+    }
+
+
+    .dev-profile-section-title {
+
+        font-size: 12px;
+
+    }
+
+}

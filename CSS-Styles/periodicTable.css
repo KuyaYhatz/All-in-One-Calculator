@@ -1,0 +1,690 @@
+/*==================================================
+        PERIODIC TABLE CONTAINER
+==================================================*/
+
+.periodic-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+/*===================================================
+                TITLE
+====================================================*/
+
+.periodic-container .title {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.periodic-container .title h1 {
+    margin-bottom: 10px;
+    color: aqua;
+    text-shadow: rgb(1, 37, 37);
+}
+
+.periodic-container .title p {
+    color: aqua;
+}
+
+/*===================================================
+            PERIODUC TABLE GRID
+====================================================*/
+#periodicTable {
+    display: grid;
+
+    grid-template-columns: repeat(18 , 70px);
+
+    grid-template-rows: 
+        repeat(7, 80px)
+        30px
+        repeat(2, 80px);
+
+    gap: 5px;
+    width: max-content;
+    margin: 30px auto;
+}
+
+/*==================================================
+        ELEMENT BOX
+==================================================*/
+
+.element-box{
+    width: 70px;
+    height: 80px;
+
+    background:rgb(1, 37, 37);
+
+    border: 2px solid aqua;
+    border-radius:8px;
+
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    cursor:pointer;
+    transition: .2s;
+    color: aqua;
+    box-sizing: border-box;
+}
+
+/*==================================================
+        HOVER
+==================================================*/
+.element-box:hover{
+    transform:scale(1.08);
+    background-color: aqua;
+    color: rgb(1, 37, 37);
+    z-index: 10;
+    box-shadow: 0 0 15px aqua;
+}
+
+/*==================================================
+        ATOMIC NUMBER
+==================================================*/
+
+.atomic-number {
+    width: 100%;
+    text-align: left;
+    font-size: 11px;
+}
+
+
+/*==================================================
+        SYMBOL
+==================================================*/
+
+.symbol {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+
+/*==================================================
+        ELEMENT NAME
+==================================================*/
+
+.element-name {
+    font-size: 9px;
+    text-align: center;
+}
+
+/*==================================================
+        BACK BUTTON
+==================================================*/
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 10px;
+    background: aqua;
+    color: rgb(1, 37, 37);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.back-button {
+    background: aqua;
+    transform: translateX(-3px);
+    box-shadow: 0 0 15px aqua;
+}
+.back-button {
+    transform: scale(0.96);
+}
+
+
+/*==================================================
+        ELEMENT DETAILS
+==================================================*/
+
+#elementDetails {
+    display: none;
+    max-width: 800px;
+    margin: 30px auto;
+    background: rgb(1, 37, 37);
+    color: aqua;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3);
+}
+
+#elementDetails h1 {
+    color: aqua;
+    margin-bottom: 20px;
+}
+
+
+#elementDetails p {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+/*==================================================
+        ELEMENT INFO HEADER
+==================================================*/
+.element-info-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.big-symbol {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: aqua;
+    color: rgb(1, 37, 37);
+
+    border-radius: 15px;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.periodic-container p {
+    color: aqua;
+}
+
+
+/*==================================================
+            INFORMATION GRID
+==================================================*/
+.element-info-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    
+    gap: 15px;
+}
+
+.element-info-grid > div {
+    background: rgb(1, 48, 48, 0.95);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.element-info-grid span {
+    display: block;
+    font-size: 13px;
+    color: limegreen;
+    margin-bottom: 18px;
+}
+
+.element-info-grid strong {
+    font-size: 18px;
+}
+
+.element-config {
+    grid-column: span 2;
+}
+
+/*==================================================
+                MOBILE
+==================================================*/
+
+@media(max-width:700px) {
+
+    .periodic-container {
+        padding: 10px;
+    }
+
+    #periodicTable {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+    }
+
+
+    #elementDetails {
+        margin-top: 20px;
+        padding: 20px;
+        height: 148vh;
+        
+
+    }
+
+
+    .element-info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .electron-config {
+
+        grid-column: span 1;
+
+    }
+
+}
+
+/*=======================================
+        ELEMENT COMBINATION DESIGN
+=======================================*/
+
+/*==================================================*
+*COMBINATION BUTTON
+*==================================================*/
+
+.combination-button-container {
+    display: flex;
+    justify-content: end;
+    margin: 30px 0;
+}
+
+.combination-button {
+    padding: 14px 24px;
+    border: 2px solid aqua;
+    border-radius: 12px;
+    background: rgb(1, 37, 37);
+    color: aqua;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.combination-button:hover {
+    background: aqua;
+    color: rgb(1, 37, 37);
+    transform: translateY(-3px);
+}
+
+
+/*==================================================*
+*COMBINATION CONTAINER
+*==================================================*/
+
+.combination-container {
+    width: 100%;
+    padding: 25px;
+    color: aqua;
+}
+
+
+/*==================================================*
+*TITLE
+*==================================================*/
+
+.combination-title {
+    margin-bottom: 30px;
+}
+
+.combination-title h1 {
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.combination-title p {
+    color: aqua;
+}
+
+
+/*==================================================*
+*MAIN LAYOUT
+*==================================================*/
+
+.combination-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/*==================================================*
+*LEFT SIDE
+*==================================================*/
+
+.combination-builder {
+    background: rgb(1, 37, 37);
+    border: 1px solid aqua;
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.combination-builder h2 {
+    margin-bottom: 10px;
+}
+
+
+/*==================================================*
+*INPUT
+*==================================================*/
+
+.element-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.combine-input {
+    flex: 1;
+    padding: 13px;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    background: rgb(1, 48, 48);
+    color: aqua;
+    outline: none;
+}
+
+.combine-input::placeholder {
+    color: rgba(0,255,255,.55);
+}
+
+
+/*==================================================*
+*BUTTONS
+*==================================================*/
+
+.combination-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.add-element-button,
+.combine-button {
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 2px solid aqua;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-element-button {
+    background: transparent;
+    color: aqua;
+}
+
+.combine-button {
+    background: aqua;
+    color: rgb(1, 37, 37);
+}
+
+.remove-element-button {
+    width: 42px;
+    border: none;
+    border-radius: 10px;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+
+/*==================================================*
+*PREVIEW
+*==================================================*/
+
+.combination-preview {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgb(1, 48, 48);
+}
+
+.selected-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selected-element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgb(1, 37, 37);
+    border-radius: 10px;
+}
+
+.preview-symbol {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.selected-element small {
+    display: block;
+}
+
+
+/*==================================================*
+*EQUATION
+*==================================================*/
+
+.combination-equation {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*==================================================*
+*RIGHT SIDE
+*==================================================*/
+
+.substance-details {
+    background: rgb(1, 37, 37);
+    border: 1px solid aqua;
+    border-radius: 18px;
+    padding: 25px;
+}
+
+
+/*==================================================*
+*SUBSTANCE HEADER
+*==================================================*/
+
+.substance-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.substance-formula {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: aqua;
+    color: rgb(1, 37, 37);
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/*==================================================*
+*SECTIONS
+*==================================================*/
+
+.substance-section {
+    margin-top: 25px;
+}
+
+.substance-section h3 {
+    margin-bottom: 12px;
+}
+
+
+/*==================================================*
+*LARGE FORMULA
+*==================================================*/
+
+.large-formula {
+    padding: 20px;
+    background: rgb(1, 48, 48);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/*==================================================*
+*SUBSTANCE ELEMENTS
+*==================================================*/
+
+.substance-elements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.substance-element {
+    padding: 15px;
+    background: rgb(1, 48, 48);
+    border-radius: 12px;
+}
+
+.substance-element strong {
+    display: block;
+    font-size: 28px;
+}
+
+.substance-element span,
+.substance-element small {
+    display: block;
+}
+
+
+/*==================================================*
+*INFO GRID
+*==================================================*/
+
+.substance-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.substance-info-grid > div {
+    background: rgb(1, 48, 48);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.substance-info-grid span {
+    display: block;
+    font-size: 12px;
+    color: limegreen;
+    margin-bottom: 8px;
+}
+
+
+/*==================================================*
+*EQUATION
+*==================================================*/
+
+.chemical-equation {
+    padding: 18px;
+    background: rgb(1, 48, 48);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/*==================================================*
+*ELEMENT DETAILS
+*==================================================*/
+
+.element-detail-list {
+    display: grid;
+    gap: 10px;
+}
+
+.element-detail {
+    background: rgb(1, 48, 48);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.element-detail h4 {
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.element-detail p {
+    margin: 5px 0;
+}
+
+
+/*==================================================*
+*EMPTY / UNKNOWN
+*==================================================*/
+
+.empty-substance,
+.unknown-substance {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-substance > div,
+.unknown-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.unknown-formula {
+    margin: 20px;
+    padding: 15px 30px;
+    background: rgb(1, 48, 48);
+    border-radius: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.educational-note {
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+
+/*==================================================*
+*MOBILE
+*==================================================*/
+
+@media (max-width: 800px) {
+
+    .combination-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .substance-elements {
+        grid-template-columns: 1fr;
+    }
+
+    .substance-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

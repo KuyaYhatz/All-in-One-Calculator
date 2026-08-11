@@ -1,0 +1,1111 @@
+/*==================================================*
+ * PERSONAL FINANCE SYSTEM
+ * FUTURISTIC AQUA INTERFACE
+ *==================================================*/
+
+.finance-container {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    color: #d9ffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/*==================================================*
+ * TITLE
+ *==================================================*/
+
+.finance-title {
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+    padding: 22px 25px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.18);
+
+    border-radius: 14px;
+
+    background: rgba(1, 43, 46, 0.788);
+
+    box-shadow:
+        0 0 25px
+        rgba(0,255,255,.06);
+
+    overflow: hidden;
+
+}
+
+
+.finance-title::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            aqua,
+            transparent
+        );
+
+}
+
+
+.finance-badge {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding:
+        4px 9px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.3);
+
+    border-radius: 4px;
+
+    color: aqua;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.finance-title h1 {
+
+    margin: 0 0 7px;
+
+    color: aqua;
+
+    font-size: 27px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px
+        rgba(0,255,255,.5);
+
+}
+
+
+.finance-title p {
+
+    margin: 0;
+
+    color: #668f93;
+
+    font-size: 12px;
+
+}
+
+
+/*==================================================*
+ * MAIN LAYOUT
+ *==================================================*/
+
+.finance-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        260px
+        minmax(0,1fr);
+
+    gap: 18px;
+
+    width: 100%;
+
+    height:
+        calc(100vh - 185px);
+
+    min-height: 0;
+
+}
+
+
+/*==================================================*
+ * LEFT MENU
+ *==================================================*/
+
+.finance-menu {
+
+    min-width: 0;
+    min-height: 0;
+    height: 90.5%;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0,255,255,.18);
+
+    border-radius: 14px;
+
+    background: rgba(1, 43, 46, 0.788);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,255,255,.05);
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        aqua
+        rgba(0,255,255,.08);
+
+}
+
+
+.finance-menu::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.finance-menu::-webkit-scrollbar-track {
+
+    background:
+        rgba(0,255,255,.04);
+
+}
+
+
+.finance-menu::-webkit-scrollbar-thumb {
+
+    background:
+        aqua;
+
+    border-radius: 10px;
+
+}
+
+
+/*==================================================*
+ * MENU HEADER
+ *==================================================*/
+
+.finance-menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    padding:
+        5px 5px 12px;
+
+    border-bottom:
+        1px solid
+        rgba(0,255,255,.10);
+
+}
+
+
+.finance-menu-header span {
+
+    color: aqua;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.finance-menu-header small {
+
+    color: #416b70;
+
+    font-size: 8px;
+
+}
+
+
+/*==================================================*
+ * NAV BUTTONS
+ *==================================================*/
+
+.finance-nav {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-bottom: 7px;
+
+    padding:
+        10px 12px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0,255,255,.07);
+
+    border-radius: 8px;
+
+    background:
+        rgba(0,255,255,.015);
+
+    color: #638d91;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.finance-nav:hover {
+
+    border-color:
+        rgba(0,255,255,.25);
+
+    background:
+        rgba(0,255,255,.05);
+
+    color: aqua;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+.finance-nav.active {
+
+    border-color:
+        rgba(0,255,255,.55);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,255,255,.13),
+            rgba(0,255,255,.035)
+        );
+
+    color: aqua;
+
+    box-shadow:
+        0 0 15px
+        rgba(0,255,255,.08);
+
+}
+
+
+.finance-nav.active::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+
+    width: 2px;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 8px aqua;
+
+}
+
+
+.finance-icon {
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(0,255,255,.15);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0,255,255,.03);
+
+    font-size: 14px;
+
+}
+
+
+/*==================================================*
+ * CALCULATOR PANEL
+ *==================================================*/
+
+.finance-calculator {
+
+    min-width: 0;
+    min-height: 0;
+
+    height: 90%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0,255,255,.25);
+
+    border-radius: 14px;
+
+    background:rgba(1, 43, 46, 0.788);
+
+    box-shadow:
+        0 0 25px
+        rgba(0,255,255,.06);
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        aqua
+        rgba(0,255,255,.08);
+
+}
+
+
+.finance-calculator::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.finance-calculator::-webkit-scrollbar-track {
+
+    background:
+        rgba(0,255,255,.04);
+
+}
+
+
+.finance-calculator::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            180deg,
+            aqua,
+            #008b8b
+        );
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 8px
+        rgba(0,255,255,.5);
+
+}
+
+
+/*==================================================*
+ * CALCULATOR HEADER
+ *==================================================*/
+
+.calculator-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid
+        rgba(0,255,255,.10);
+
+}
+
+
+.calculator-icon {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(0,255,255,.4);
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,255,255,.04);
+
+    font-size: 27px;
+
+    box-shadow:
+        0 0 18px
+        rgba(0,255,255,.08);
+
+}
+
+
+.calculator-label {
+
+    color:
+        #47777b;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.calculator-header h2 {
+
+    margin:
+        4px 0;
+
+    color: aqua;
+
+    font-size: 23px;
+
+}
+
+
+.calculator-header p {
+
+    margin: 0;
+
+    color: #638d91;
+
+    font-size: 11px;
+
+}
+
+
+/*==================================================*
+ * FORM GRID
+ *==================================================*/
+
+.finance-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap: 15px;
+
+}
+
+
+/*==================================================*
+ * FIELD
+ *==================================================*/
+
+.finance-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.finance-field label {
+
+    color:
+        #76a9ad;
+
+    font-size: 10px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .7px;
+
+}
+
+
+.finance-field input {
+
+    width: 100%;
+
+    height: 47px;
+
+    padding:
+        0 13px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0,255,255,.15);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background:
+        rgba(0,255,255,.025);
+
+    color: aqua;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.finance-field input:focus {
+
+    border-color: aqua;
+
+    background:
+        rgba(0,255,255,.05);
+
+    box-shadow:
+        0 0 15px
+        rgba(0,255,255,.10);
+
+}
+
+
+.finance-field input::placeholder {
+
+    color:
+        #385e62;
+
+}
+
+
+/*==================================================*
+ * CALCULATE BUTTON
+ *==================================================*/
+
+.finance-calculate {
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 20px;
+
+    border:
+        1px solid aqua;
+
+    border-radius: 8px;
+
+    background:
+        aqua;
+
+    color:
+        #001719;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+
+    box-shadow:
+        0 0 15px
+        rgba(0,255,255,.12);
+
+}
+
+
+.finance-calculate:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 25px
+        rgba(0,255,255,.35);
+
+}
+
+
+/*==================================================*
+ * RESULT
+ *==================================================*/
+
+.finance-result {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.12);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0,255,255,.025);
+
+    color:
+        #668f93;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+.result-main {
+
+    margin-bottom: 18px;
+
+    padding: 18px;
+
+    border-left:
+        3px solid aqua;
+
+    border-radius: 7px;
+
+    background:
+        rgba(0,255,255,.035);
+
+}
+
+
+.result-main span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        #4e7d81;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.result-main strong {
+
+    color: aqua;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 25px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0,255,255,.35);
+
+}
+
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap: 10px;
+
+}
+
+
+.result-grid > div {
+
+    padding: 13px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.08);
+
+    border-radius: 7px;
+
+    background:
+        rgba(0,0,0,.15);
+
+}
+
+
+.result-grid span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        #4d777b;
+
+    font-size: 9px;
+
+}
+
+
+.result-grid strong {
+
+    color:
+        #a4edf0;
+
+    font-size: 12px;
+
+}
+
+
+/*==================================================*
+ * CREDIT METER
+ *==================================================*/
+
+.credit-meter {
+
+    width: 100%;
+
+    height: 10px;
+
+    margin:
+        15px 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        rgba(0,255,255,.06);
+
+}
+
+
+.credit-meter div {
+
+    height: 100%;
+
+    background:
+        aqua;
+
+    box-shadow:
+        0 0 10px aqua;
+
+    transition:
+        width .5s ease;
+
+}
+
+
+.credit-status,
+.dti-status {
+
+    padding: 12px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.08);
+
+    border-radius: 7px;
+
+    color:
+        #658f93;
+
+}
+
+
+.credit-status strong,
+.dti-status strong {
+
+    color: aqua;
+
+}
+
+
+/*==================================================*
+ * AMORTIZATION TABLE
+ *==================================================*/
+
+.amort-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.amort-table {
+
+    width: 100%;
+
+    border-collapse:
+        collapse;
+
+    font-size: 9px;
+
+}
+
+
+.amort-table th {
+
+    padding: 10px;
+
+    border-bottom:
+        1px solid
+        rgba(0,255,255,.18);
+
+    color: aqua;
+
+    text-align: left;
+
+    white-space: nowrap;
+
+}
+
+
+.amort-table td {
+
+    padding: 9px;
+
+    border-bottom:
+        1px solid
+        rgba(0,255,255,.06);
+
+    color:
+        #719a9e;
+
+    white-space: nowrap;
+
+}
+
+
+.amort-table tr:hover td {
+
+    background:
+        rgba(0,255,255,.03);
+
+    color:
+        #b5eef0;
+
+}
+
+
+.finance-note {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color:
+        #456c70;
+
+    font-size: 9px;
+
+}
+
+
+/*==================================================*
+ * RESPONSIVE
+ *==================================================*/
+
+@media (max-width: 1000px) {
+
+    .finance-layout {
+
+        grid-template-columns:
+            210px
+            minmax(0,1fr);
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .finance-layout {
+
+        grid-template-columns:
+            1fr;
+
+        height: auto;
+
+    }
+
+
+    .finance-menu {
+
+        max-height: 300px;
+
+    }
+
+
+    .finance-calculator {
+
+        min-height: 600px;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .finance-container {
+
+        padding: 5px;
+
+    }
+
+
+    .finance-title {
+
+        padding: 18px;
+
+    }
+
+
+    .finance-title h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .finance-calculator {
+
+        padding: 16px;
+
+    }
+
+
+    .finance-form-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .result-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .calculator-header {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .calculator-icon {
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 22px;
+
+    }
+
+}

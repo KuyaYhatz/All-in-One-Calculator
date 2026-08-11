@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Calculation Web App</title>
+        
+        <!-- FAVICON -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="img/All-in-One-Calculator.png"
+        >
+
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--    STYLESHEETS     -->
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/about.css">
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/faq.css">
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/developer.css">
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/welcome.css">
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/navigation.css">
+        <link rel="stylesheet" href="CSS-Styles/main.css">
+        <link rel="stylesheet" href="CSS-Styles/home.css">
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/calculator.css">
+        <link rel="stylesheet" href="CSS-Styles/geometric.css">
+        <link rel="stylesheet" href="CSS-Styles/lcm.css">
+        <link rel="stylesheet" href="CSS-Styles/speedDistance.css">
+        <link rel="stylesheet" href="CSS-Styles/periodicTable.css">
+        <link rel="stylesheet" href="CSS-Styles/conversion.css">
+        <link rel="stylesheet" href="CSS-Styles/finance.css">
+        <link rel="stylesheet" href="CSS-Styles/descriptive-statistics.css">
+        <link rel="stylesheet" href="CSS-Styles/cpu-performance.css">
+        <link rel="stylesheet" href="CSS-Styles/network.css">
+        <link rel="stylesheet" href="CSS-Styles/salary-payroll.css">
+        <link rel="stylesheet" href="CSS-Styles/pc-spec-analyzer.css">
+        <link rel="stylesheet" href="CSS-Styles/scientific.css">
+        <link rel="stylesheet" href="CSS-Styles/unit-converter.css">
+        <link rel="stylesheet" href="CSS-Styles/unit-scientific-converter.css">
+        <link rel="stylesheet" href="CSS-Styles/leap-year.css">
+
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/atomIQ-styles.css">
+        <link rel="stylesheet" href="CSS-Styles/AI-Designs/footer.css">
+        <link rel="stylesheet" href="CSS-Styles/responsive.css">
+
+    </head>
+
+    <body>
+
+
+        <!-- ===================================
+                    HAMBURGER BUTTON
+        =========================================-->
+
+        <button
+            id="menuToggle"
+            class="menu-toggle"
+            onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <!-- ===================================
+                    O V E R L A Y
+        =========================================-->
+
+        <div 
+            id="menuOverlay" 
+            class="menu-overlay" 
+            onclick="toggleMenu()">
+        </div>
+        
+        <!-- MAIN APP -->
+        <div class="app">
+
+            <!-- ===================================
+                        H E A D E R
+            =========================================-->
+
+            <header class="main-header">
+
+                <div
+                    class="header-logo"
+                    onclick="loadPage('welcome')"
+                    role="button"
+                    tabindex="0"
+                    title="Go to Home"
+                >
+
+                    <img
+                        src="img/All-in-One-Calculator.png"
+                        alt="All in One Calculator Logo"
+                    >
+
+                    <span>
+                        All in One Calculator
+                    </span>
+                </div>
+
+                <!-- =========================================
+                    HEADER NAVIGATION
+                ========================================= -->
+
+                <nav class="header-nav">
+
+                    <!-- DESKTOP BUTTONS -->
+
+                    <button
+                        type="button"
+                        onclick="loadHeaderPage('about')"
+                    >
+                        About
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="loadHeaderPage('faq')"
+                    >
+                        FAQ
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="loadHeaderPage('developer')"
+                    >
+                        Developer
+                    </button>
+
+                </nav>
+
+
+                <!-- =========================================
+                    MOBILE HEADER MENU
+                    ONLY VISIBLE AT 375px AND BELOW
+                ========================================= -->
+
+                <details class="mobile-header-menu">
+
+                    <summary
+                        class="mobile-menu-button"
+                        title="Header Menu"
+                        aria-label="Open Header Menu"
+                    >
+                        ⋮
+                    </summary>
+
+
+                    <div class="mobile-header-dropdown">
+
+                        <button
+                            type="button"
+                            onclick="
+                                loadHeaderPage('about');
+                                this.closest('details').removeAttribute('open');
+                            "
+                        >
+                            About
+                        </button>
+
+
+                        <button
+                            type="button"
+                            onclick="
+                                loadHeaderPage('faq');
+                                this.closest('details').removeAttribute('open');
+                            "
+                        >
+                            FAQ
+                        </button>
+
+
+                        <button
+                            type="button"
+                            onclick="
+                                loadHeaderPage('developer');
+                                this.closest('details').removeAttribute('open');
+                            "
+                        >
+                            Developer
+                        </button>
+
+                    </div>
+
+                </details>
+
+            </header>
+
+            <!--    M A I N   A R E A   -->
+            <div class="main-area">
+                <!-- ===================================
+                        S I D E   N A V I G A T I O N
+                =========================================-->
+                <aside class="navigation">
+
+                    <!-- SYSTEM HEADER -->
+
+                    <div class="nav-system-header">
+
+                        <div class="nav-system-indicator">
+                            <span></span>
+                            SYSTEM MENU
+                        </div>
+
+                        <div class="nav-system-line"></div>
+
+                    </div>
+
+
+                    <!-- HOME -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('home')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/Home-icon.png"
+                                alt="Home">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Home
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- MODERN CALCULATOR -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('calculator')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/calculator-icon.png"
+                                alt="Calculator">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Modern Calculator
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- SCIENTIFIC CALCULATOR -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('scientific')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/scientific-calcu-icon.png"
+                                alt="Calculator">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Scientific Calculator
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- LCM -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('lcmCalculator')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/LCM-icon.png"
+                                alt="LCM">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                LCM Calculator
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- GEOMETRIC -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('geometric')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/geometric-icon.png"
+                                alt="Geometric">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Geometric Calculator
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- SPEED TIME DISTANCE -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('speedDistance')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/std-icon.png"
+                                alt="STD">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Speed • Time • Distance
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- UNIT CONVERTER -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('unit-converter')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/unit-converter.png"
+                                alt="STD">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Unit Converter
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                     <!-- Universal Conversion Center -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('universal')">
+
+                        <div class="nav-icon-box">
+
+                            <img
+                                src="img/PTElements/universal-conversion-icon.png"
+                                alt="STD">
+
+                        </div>
+
+                        <div class="nav-button-content">
+
+                            <span class="nav-button-code">
+                            </span>
+
+                            <span class="nav-button-name">
+                                Universal Conversion Center
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- PERIODIC TABLE -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('periodic')">
+
+                        <div class="nav-icon-box">
+                            <img
+                                src="img/PTElements/periodical-icon.png"
+                                alt="Periodic Table">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Periodic Table
+                            </span>
+                        </div>
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+                    </button>
+
+                    <!-- NUMBER SYSTEM -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('conversion')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/conversion-icon.png"
+                                alt="System Number Conversion">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Number System
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- Personal Finance Calculator -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('finance')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/finance-icon.png"
+                                alt="Personal Finance Calculator">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Personal Finance Calculator
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- Descriptive Statistics -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('statistics')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/descriptive-statistics-icon.png"
+                                alt="Descriptive Statistics">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Descriptive Statistics
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- CPU PERFORMANCE ESTIMATOR -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('cpu-performance')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/CPU-Performance.png"
+                                alt="CPU Performance Estimator">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                CPU Performance Estimator
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- NETWORK -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('networking')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/networking.png"
+                                alt="Networking">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Networking
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- SALARY & PAYROLL CALCULATION -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('payroll')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/payroll-icon.png"
+                                alt="Payroll">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Salary & Payroll
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                     <!-- PC SPEC ANALYZER -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('pc-spec-analyzer')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/pc-spec-icon.png"
+                                alt="PC-Spec">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                PC Spec Analyzer
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+                    <!-- EAP YEAR CHECKER -->
+
+                    <button
+                        class="nav-future-button"
+                        onclick="loadPage('leap-year')">
+
+                        <div class="nav-icon-box nav-number-icon">
+                            <img 
+                                src="img/PTElements/pc-spec-icon.png"
+                                alt="PC-Spec">
+                        </div>
+                        <div class="nav-button-content">
+                            <span class="nav-button-code">
+                            </span>
+                            <span class="nav-button-name">
+                                Leap Year Checker
+                            </span>
+
+                        </div>
+
+                        <span class="nav-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- BOTTOM SYSTEM STATUS -->
+
+                    <div class="nav-system-footer">
+
+                        <div class="nav-status">
+
+                            <span class="nav-status-dot"></span>
+
+                            SYSTEM ONLINE
+
+                        </div>
+
+                        <span class="nav-version">
+                            v1.0
+                        </span>
+
+                    </div>
+
+                </aside>
+           
+
+                <!-- ===================================
+                            PAGE CANVAS
+                =========================================-->
+
+                <main id="canvas">
+
+                    <div class="welcome-future">
+
+                        <!-- =================================
+                            BACKGROUND GRID
+                        ================================= -->
+
+                        <div class="welcome-grid"></div>
+
+
+                        <!-- =================================
+                            SYSTEM STATUS
+                        ================================= -->
+
+                        <div class="welcome-status">
+
+                            <span class="welcome-status-dot"></span>
+
+                            SYSTEM INITIALIZING...
+
+                        </div>
+
+
+
+                        <!-- =================================
+                            MAIN CONTENT
+                        ================================= -->
+
+                        <div class="welcome-content">
+
+
+                            <!-- LOGO -->
+
+                            <div class="welcome-logo-box">
+
+                                <div class="welcome-logo-ring ring-one"></div>
+
+                                <div class="welcome-logo-ring ring-two"></div>
+
+                                <div class="welcome-logo-ring ring-three"></div>
+
+
+                                <div class="welcome-logo">
+
+                                    <img
+                                        src="img/All-in-One-Calculator.png"
+                                        alt="All-in-One Calculator Logo"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- SYSTEM LABEL -->
+
+                            <div class="welcome-system-label">
+
+                                KUYA RAM // DIGITAL CALCULATION SYSTEM
+
+                            </div>
+
+
+
+                            <!-- TITLE -->
+
+                            <h1 class="welcome-title">
+
+                                WELCOME TO
+
+                                <br>
+
+                                <span>
+                                    ALL-IN-ONE
+                                </span>
+
+                                CALCULATOR
+
+                            </h1>
+
+
+
+                            <!-- TAGLINE -->
+
+                            <h2 class="welcome-tagline">
+
+                                Powerful tools.
+                                Accurate results.
+                                <br>
+
+                                <span>
+                                    One complete calculator.
+                                </span>
+
+                            </h2>
+
+
+
+                            <!-- DESCRIPTION -->
+
+                            <p class="welcome-description">
+
+                                Everything you need,
+                                all in one place.
+
+                            </p>
+
+
+
+                            <!-- DIVIDER -->
+
+                            <div class="welcome-divider">
+
+                                <span></span>
+
+                            </div>
+
+
+
+                            <!-- SYSTEM INFO -->
+
+                            <div class="welcome-system-info">
+
+                                <div>
+
+                                    <strong>
+                                        CALC
+                                    </strong>
+
+                                    <small>
+                                        SYSTEM
+                                    </small>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        FAST
+                                    </strong>
+
+                                    <small>
+                                        PROCESSING
+                                    </small>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        ACCURATE
+                                    </strong>
+
+                                    <small>
+                                        RESULTS
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                            BOTTOM SYSTEM
+                        ================================= -->
+
+                        <div class="welcome-footer">
+
+                            <span>
+                                INITIALIZING CALCULATION ENGINE...
+                            </span>
+
+
+                            <span class="welcome-version">
+                                v1.0
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                            CORNER DECORATIONS
+                        ================================= -->
+
+                        <div class="welcome-corner welcome-corner-tl"></div>
+
+                        <div class="welcome-corner welcome-corner-tr"></div>
+
+                        <div class="welcome-corner welcome-corner-bl"></div>
+
+                        <div class="welcome-corner welcome-corner-br"></div>
+
+
+                    </div>
+
+                </main>
+            </div>
+            
+            <!-- ==================================================
+                FUTURISTIC FOOTER
+            ================================================== -->
+
+            <footer class="main-footer">
+
+                <div class="footer-glow"></div>
+
+                <div class="footer-content">
+
+                    <!-- BRAND -->
+                    <div class="footer-brand">
+
+                        <div class="footer-logo">
+
+                            <span class="footer-logo-symbol">
+                                ⬡
+                            </span>
+
+                            <span class="footer-logo-text">
+                                ALL-IN-ONE CALCULATOR
+                            </span>
+
+                        </div>
+
+                        <p class="footer-description">
+                            Mathematical • Scientific • Financial
+                            Calculation System
+                        </p>
+
+                    </div>
+
+
+                    <!-- SYSTEM STATUS -->
+                    <div class="footer-system">
+
+                        <div class="footer-system-label">
+                            SYSTEM STATUS
+                        </div>
+
+                        <div class="footer-status">
+
+                            <span class="status-dot"></span>
+
+                            <span>
+                                SYSTEM ONLINE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- VERSION -->
+                    <div class="footer-version-box">
+
+                        <span class="footer-version-label">
+                            SYSTEM VERSION
+                        </span>
+
+                        <strong>
+                            v1.0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER LINE -->
+
+                <div class="footer-line">
+
+                    <span></span>
+
+                    <div class="footer-line-center">
+                        // CALCULATION SYSTEM //
+                    </div>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- COPYRIGHT -->
+
+                <div class="footer-bottom">
+
+                    <div class="footer-copyright">
+
+                        <span class="copyright-symbol">
+                            ©
+                        </span>
+
+                        <span>
+                            2026 All-in-One Calculator Web App
+                        </span>
+
+                    </div>
+
+
+                    <div class="footer-author-area">
+
+                        <span class="footer-author-label">
+                            DEVELOPED BY
+                        </span>
+
+                        <a
+                            href="https://www.facebook.com/edmiralpes.developer/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="footer-author"
+                        >
+                            Kuya Ram
+                        </a>
+
+                    </div>
+
+
+                    <div class="footer-rights">
+                        ALL RIGHTS RESERVED
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+        <!-- ===================================
+                        JAVASCRIPT
+        =========================================-->
+
+        <script src="JavaScripts/about.js"></script>
+        <script src="JavaScripts/combination/faq.js"></script>
+        <script src="JavaScripts/combination/developer.js"></script>
+        <script src="JavaScripts/welcome.js"></script>
+        <script src="JavaScripts/home.js"></script>
+        <script src="database/calculator.js"></script>
+        <script src="JavaScripts/modernCalculator.js"></script>
+        <script src="JavaScripts/lcmCalculator.js"></script>
+        <script src="JavaScripts/geometric.js"></script>
+        <script src="JavaScripts/speedDistance.js"></script>
+        
+        <script src="database/elements.js"></script>
+        <script src="database/substances.js"></script>
+        <script src="database/atomIQ.js"></script>
+        <script src="JavaScripts/combination/combination.js"></script>
+        <script src="JavaScripts/periodic.js"></script>
+        <script src="JavaScripts/conversion.js"></script>
+        <script src="JavaScripts/finance.js"></script>
+        <script src="JavaScripts/descriptive-statistics.js"></script>
+        <script src="JavaScripts/cpu-performance.js"></script>
+        <script src="JavaScripts/network.js"></script>
+        <script src="JavaScripts/salary-payroll.js"></script>
+        <script src="JavaScripts/pc-spec-analyzer.js"></script>
+        <script src="JavaScripts/scientific.js"></script>
+        <script src="JavaScripts/unit-converter.js"></script>
+        <script src="JavaScripts/unit-scientific-converter.js"></script>
+        <script src="JavaScripts/leap-year.js"></script>
+
+        <script src="JavaScripts/combination/header-function.js"></script>
+        <script src="JavaScripts/app.js"></script>
+    </body>
+</html>

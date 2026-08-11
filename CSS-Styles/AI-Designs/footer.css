@@ -1,0 +1,659 @@
+/*==================================================*
+* FUTURISTIC FOOTER
+* AQUA SCIENCE INTERFACE
+*==================================================*/
+
+.main-footer {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        18px 30px 12px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(1, 25, 30, 0.96),
+            rgba(0, 8, 12, 0.98)
+        );
+
+    border-top:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    color: #d9ffff;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+}
+
+
+/*==================================================*
+* TOP GLOW
+*==================================================*/
+
+.footer-glow {
+
+    position: absolute;
+
+    top: -40px;
+    left: 50%;
+
+    width: 60%;
+
+    height: 80px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    filter:
+        blur(35px);
+
+    pointer-events: none;
+
+}
+
+
+/*==================================================*
+* FOOTER CONTENT
+*==================================================*/
+
+.footer-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 35px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+}
+
+
+/*==================================================*
+* BRAND
+*==================================================*/
+
+.footer-brand {
+
+    min-width: 0;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.footer-logo-symbol {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 34px;
+
+    height: 34px;
+
+    border:
+        1px solid
+        aqua;
+
+    border-radius: 8px;
+
+    color: aqua;
+
+    font-size: 20px;
+
+    text-shadow:
+        0 0 10px aqua;
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.25),
+
+        inset 0 0 10px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+.footer-logo-text {
+
+    color: aqua;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, 0.5);
+
+}
+
+
+.footer-description {
+
+    margin:
+        6px 0 0 44px;
+
+    color:
+        #547b7f;
+
+    font-size: 10px;
+
+    letter-spacing:
+        0.5px;
+
+}
+
+
+/*==================================================*
+* SYSTEM STATUS
+*==================================================*/
+
+.footer-system {
+
+    padding:
+        8px 15px;
+
+    border-left:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    border-right:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+}
+
+
+.footer-system-label {
+
+    margin-bottom: 5px;
+
+    color:
+        #4f777b;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.footer-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        #9cecef;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.8px;
+
+}
+
+
+/*==================================================*
+* STATUS DOT
+*==================================================*/
+
+.status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 8px aqua;
+
+    animation:
+        footerPulse 1.5s
+        infinite;
+
+}
+
+
+@keyframes footerPulse {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+        box-shadow:
+            0 0 5px aqua;
+
+    }
+
+    50% {
+
+        opacity: 0.45;
+
+        box-shadow:
+            0 0 15px aqua;
+
+    }
+
+}
+
+
+/*==================================================*
+* VERSION
+*==================================================*/
+
+.footer-version-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+}
+
+
+.footer-version-label {
+
+    color:
+        #4f777b;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.footer-version-box strong {
+
+    margin-top: 3px;
+
+    color: aqua;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.5);
+
+}
+
+
+/*==================================================*
+* FOOTER LINE
+*==================================================*/
+
+.footer-line {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    max-width: 1400px;
+
+    margin:
+        12px auto 8px;
+
+}
+
+
+.footer-line > span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 255, 255, 0.25)
+        );
+
+}
+
+
+.footer-line > span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.25),
+            transparent
+        );
+
+}
+
+
+.footer-line-center {
+
+    color:
+        #365c60;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+}
+
+
+/*==================================================*
+* FOOTER BOTTOM
+*==================================================*/
+
+.footer-bottom {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+}
+
+
+/*==================================================*
+* COPYRIGHT
+*==================================================*/
+
+.footer-copyright {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color:
+        #527b7f;
+
+    font-size: 9px;
+
+}
+
+
+.copyright-symbol {
+
+    color: aqua;
+
+}
+
+
+/*==================================================*
+* AUTHOR
+*==================================================*/
+
+.footer-author-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.footer-author-label {
+
+    color:
+        #466c70;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.footer-author {
+
+    color: aqua;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.footer-author:hover {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px aqua;
+
+}
+
+
+/*==================================================*
+* RIGHTS
+*==================================================*/
+
+.footer-rights {
+
+    color:
+        #3f6569;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/*==================================================*
+* TABLET
+*==================================================*/
+
+@media (max-width: 900px) {
+
+    .main-footer {
+
+        padding:
+            15px 20px 10px;
+
+    }
+
+
+    .footer-content {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .footer-version-box {
+
+        display: none;
+
+    }
+
+
+    .footer-system {
+
+        border-right: none;
+
+    }
+
+}
+
+
+/*==================================================*
+* MOBILE
+*==================================================*/
+
+@media (max-width: 600px) {
+
+    .main-footer {
+        padding: 0;
+    }
+
+
+    .footer-content {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .footer-system {
+
+        padding:0;
+        border:none;
+
+    }
+
+
+    .footer-description {
+
+        margin-left: 44px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 6px;
+
+    }
+
+
+    .footer-rights {
+
+        display: none;
+
+    }
+
+
+    .footer-line {
+
+        margin:
+            9px auto 7px;
+
+    }
+
+}
+
+
+/*==================================================*
+* SMALL PHONE
+*==================================================*/
+
+@media (max-width: 375px) {
+
+    .footer-logo-text {
+
+        font-size: 11px;
+
+    }
+
+
+    .footer-description {
+
+        font-size: 9px;
+
+    }
+
+
+    .footer-line-center {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+    }
+
+}

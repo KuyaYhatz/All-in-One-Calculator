@@ -1,0 +1,812 @@
+/*==================================================*
+ * CPU PERFORMANCE ESTIMATOR
+ * FUTURISTIC AQUA THEME
+ *==================================================*/
+
+.cpuPerf-container {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 255, 0.12),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(0, 255, 255, 0.06),
+            transparent 30%
+        ),
+
+        #02080c;
+}
+
+
+/*==================================================*
+ * HEADER
+ *==================================================*/
+
+.cpuPerf-header {
+
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    background:
+        rgba(0, 20, 24, 0.75);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.cpuPerf-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00ffff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px #00ffff;
+}
+
+
+.cpuPerf-badge {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 10px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.4);
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+}
+
+
+.cpuPerf-header h1 {
+
+    margin: 0;
+
+    color: #00ffff;
+
+    font-size: 32px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.6);
+}
+
+
+.cpuPerf-header p {
+
+    margin:
+        10px 0 0;
+
+    color:
+        rgba(220, 255, 255, 0.7);
+
+    line-height: 1.6;
+}
+
+
+/*==================================================*
+ * MAIN LAYOUT
+ *==================================================*/
+
+.cpuPerf-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 380px)
+        1fr;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/*==================================================*
+ * PANELS
+ *==================================================*/
+
+.cpuPerf-input-panel,
+.cpuPerf-result-panel {
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.22);
+
+    background:
+        rgba(0, 15, 20, 0.82);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.06);
+
+    padding: 22px;
+
+    box-sizing: border-box;
+}
+
+
+.cpuPerf-panel-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+}
+
+
+.cpuPerf-panel-title span {
+
+    color: #00ffff;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.cpuPerf-panel-title small {
+
+    color:
+        rgba(0, 255, 255, 0.5);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/*==================================================*
+ * INPUT FIELD
+ *==================================================*/
+
+.cpuPerf-field {
+
+    margin-bottom: 16px;
+}
+
+
+.cpuPerf-field label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        rgba(220, 255, 255, 0.8);
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.cpuPerf-input-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    background:
+        rgba(0, 0, 0, 0.3);
+
+    transition:
+        0.25s ease;
+}
+
+
+.cpuPerf-input-wrapper:focus-within {
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.15);
+}
+
+
+.cpuPerf-input-wrapper input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+.cpuPerf-input-wrapper span {
+
+    padding:
+        0 12px;
+
+    color:
+        rgba(0, 255, 255, 0.6);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/*==================================================*
+ * SELECT
+ *==================================================*/
+
+.cpuPerf-select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    outline: none;
+
+    background:
+        #031316;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.cpuPerf-select:focus {
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.15);
+}
+
+
+/*==================================================*
+ * CALCULATE BUTTON
+ *==================================================*/
+
+.cpuPerf-calculate {
+
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        #00ffff;
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    color: #00ffff;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+}
+
+
+.cpuPerf-calculate:hover {
+
+    background:
+        #00ffff;
+
+    color: #001010;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.4);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/*==================================================*
+ * IDLE SCREEN
+ *==================================================*/
+
+.cpuPerf-idle {
+
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.cpuPerf-idle-icon {
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.3);
+
+    color: #00ffff;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, 0.1);
+}
+
+
+.cpuPerf-idle h2 {
+
+    margin: 0;
+
+    color: #00ffff;
+
+    letter-spacing: 2px;
+}
+
+
+.cpuPerf-idle p {
+
+    max-width: 450px;
+
+    color:
+        rgba(220, 255, 255, 0.55);
+
+    line-height: 1.6;
+}
+
+
+/*==================================================*
+ * PERFORMANCE SCORE
+ *==================================================*/
+
+.cpuPerf-score {
+
+    text-align: center;
+
+    padding:
+        20px 0;
+}
+
+
+.cpuPerf-score span {
+
+    display: block;
+
+    color:
+        rgba(0, 255, 255, 0.6);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+.cpuPerf-score strong {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    color: #00ffff;
+
+    font-size: 65px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.5);
+}
+
+
+.cpuPerf-score small {
+
+    color:
+        rgba(0, 255, 255, 0.5);
+
+    font-size: 18px;
+}
+
+
+/*==================================================*
+ * RATING
+ *==================================================*/
+
+.cpuPerf-rating {
+
+    width: fit-content;
+
+    margin:
+        0 auto 20px;
+
+    padding:
+        7px 18px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.35);
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+}
+
+
+/*==================================================*
+ * PERFORMANCE METER
+ *==================================================*/
+
+.cpuPerf-meter {
+
+    width: 100%;
+
+    height: 8px;
+
+    margin-bottom: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    overflow: hidden;
+}
+
+
+.cpuPerf-meter div {
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #005f66,
+            #00ffff
+        );
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.7);
+
+    transition:
+        width 0.8s ease;
+}
+
+
+/*==================================================*
+ * RESULT GRID
+ *==================================================*/
+
+.cpuPerf-result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.cpuPerf-stat {
+
+    padding: 15px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    background:
+        rgba(0, 255, 255, 0.025);
+}
+
+
+.cpuPerf-stat span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        rgba(0, 255, 255, 0.5);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.cpuPerf-stat strong {
+
+    color: #dfffff;
+
+    font-size: 16px;
+}
+
+
+/*==================================================*
+ * ERROR
+ *==================================================*/
+
+.cpuPerf-error {
+
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #00ffff;
+}
+
+
+.cpuPerf-error h3 {
+
+    margin:
+        15px 0 5px;
+}
+
+
+.cpuPerf-error p {
+
+    color:
+        rgba(220, 255, 255, 0.6);
+}
+
+
+/*==================================================*
+ * DISCLAIMER
+ *==================================================*/
+
+.cpuPerf-disclaimer {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border:
+        1px solid
+        rgba(255, 170, 0, 0.15);
+
+    background:
+        rgba(255, 170, 0, 0.03);
+
+    color:
+        rgba(255, 255, 255, 0.5);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/*==================================================*
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 900px) {
+
+    .cpuPerf-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/*==================================================*
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 600px) {
+
+    .cpuPerf-container {
+
+        padding: 15px;
+
+    }
+
+
+    .cpuPerf-header {
+
+        padding: 18px;
+
+    }
+
+
+    .cpuPerf-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .cpuPerf-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cpuPerf-result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cpuPerf-panel-title {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .cpuPerf-score strong {
+
+        font-size: 52px;
+
+    }
+
+}
+
+
+/*==================================================*
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .cpuPerf-container {
+
+        padding: 10px;
+
+    }
+
+
+    .cpuPerf-header h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .cpuPerf-input-panel,
+    .cpuPerf-result-panel {
+
+        padding: 15px;
+
+    }
+
+}

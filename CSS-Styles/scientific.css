@@ -1,0 +1,820 @@
+/*==========================================================
+ * SCIENTIFIC CALCULATOR
+ * FUTURISTIC AQUA THEME
+ *==========================================================*/
+
+.sci-container {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/*==========================================================
+ * HEADER
+ *==========================================================*/
+
+.sci-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 24px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(0,255,255,.25);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,255,255,.08),
+            rgba(0,15,20,.85)
+        );
+
+    box-shadow:
+        0 0 25px rgba(0,255,255,.08);
+
+}
+
+
+.sci-header-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #001919;
+
+    background: #00ffff;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 0 20px rgba(0,255,255,.6);
+
+}
+
+
+.sci-header-info {
+
+    flex: 1;
+
+}
+
+
+.sci-system-label {
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.sci-header h1 {
+
+    margin: 5px 0;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.sci-header p {
+
+    margin: 0;
+
+    color: rgba(220,255,255,.65);
+
+}
+
+
+.sci-system-status {
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.sci-status-dot {
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: #00ffff;
+
+    box-shadow:
+        0 0 10px #00ffff;
+
+}
+
+
+/*==========================================================
+ * MAIN GRID
+ *==========================================================*/
+
+.sci-main-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(420px, 1.35fr)
+        minmax(300px, .85fr);
+
+    gap: 20px;
+
+}
+
+
+/*==========================================================
+ * CALCULATOR PANEL
+ *==========================================================*/
+
+.sci-calculator-panel,
+.sci-side-panel,
+.sci-history-panel {
+
+    border:
+        1px solid rgba(0,255,255,.2);
+
+    border-radius: 16px;
+
+    background:
+        rgba(1,15,20,.9);
+
+    box-shadow:
+        0 0 25px rgba(0,255,255,.06);
+
+}
+
+
+.sci-calculator-panel {
+
+    padding: 18px;
+
+}
+
+
+/*==========================================================
+ * DISPLAY
+ *==========================================================*/
+
+.sci-display-panel {
+
+    min-height: 145px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid rgba(0,255,255,.25);
+
+    border-radius: 12px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0,255,255,.1),
+            transparent 55%
+        ),
+        #020a0e;
+
+    box-shadow:
+        inset 0 0 25px rgba(0,255,255,.05);
+
+}
+
+
+.sci-display-top {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    color:
+        rgba(180,255,255,.5);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.sci-display-top
+.sci-memory-active {
+
+    color: #00ffff;
+
+    text-shadow:
+        0 0 10px #00ffff;
+
+}
+
+
+.sci-expression {
+
+    min-height: 20px;
+
+    margin-top: 18px;
+
+    text-align: right;
+
+    color:
+        rgba(180,255,255,.45);
+
+    font-size: 13px;
+
+}
+
+
+.sci-display {
+
+    margin-top: 5px;
+
+    text-align: right;
+
+    color: #00ffff;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px rgba(0,255,255,.55);
+
+    overflow-x: auto;
+
+}
+
+
+/*==========================================================
+ * CONTROL ROW
+ *==========================================================*/
+
+.sci-control-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(8, 1fr);
+
+    gap: 7px;
+
+    margin: 14px 0;
+
+}
+
+
+.sci-control-btn,
+.sci-memory-btn {
+
+    min-height: 36px;
+
+    border:
+        1px solid rgba(0,255,255,.18);
+
+    border-radius: 7px;
+
+    background:
+        rgba(0,255,255,.035);
+
+    color:
+        rgba(220,255,255,.75);
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.sci-control-btn:hover,
+.sci-memory-btn:hover {
+
+    border-color: #00ffff;
+
+    color: #00ffff;
+
+    background:
+        rgba(0,255,255,.1);
+
+}
+
+
+.sci-angle-active {
+
+    color: #001919;
+
+    background: #00ffff;
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px rgba(0,255,255,.4);
+
+}
+
+
+/*==========================================================
+ * KEYBOARD
+ *==========================================================*/
+
+.sci-keyboard {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+}
+
+
+.sci-key {
+
+    min-height: 58px;
+
+    border:
+        1px solid rgba(0,255,255,.13);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(0,255,255,.025)
+        );
+
+    color: #dfffff;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform .15s ease,
+        background .15s ease,
+        box-shadow .15s ease;
+
+}
+
+
+.sci-key:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #00ffff;
+
+    color: #00ffff;
+
+    box-shadow:
+        0 0 14px rgba(0,255,255,.2);
+
+}
+
+
+.sci-key:active {
+
+    transform: scale(.96);
+
+}
+
+
+.sci-function {
+
+    color: #7fffff;
+
+}
+
+
+.sci-operator {
+
+    color: #00ffff;
+
+}
+
+
+.sci-equals {
+
+    color: #001919;
+
+    background: #00ffff;
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,.35);
+
+}
+
+
+/*==========================================================
+ * ADVANCED FUNCTIONS
+ *==========================================================*/
+
+.sci-function-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 7px;
+
+    margin-top: 12px;
+
+}
+
+
+.sci-function-key {
+
+    min-height: 43px;
+
+    border:
+        1px solid rgba(0,255,255,.15);
+
+    border-radius: 8px;
+
+    background:
+        rgba(0,255,255,.035);
+
+    color:
+        #aaffff;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.sci-function-key:hover {
+
+    background:
+        rgba(0,255,255,.12);
+
+    color: #00ffff;
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px rgba(0,255,255,.15);
+
+}
+
+
+/*==========================================================
+ * SIDE PANEL
+ *==========================================================*/
+
+.sci-side-panel {
+
+    padding: 15px;
+
+    overflow-y: auto;
+
+    max-height: 720px;
+
+}
+
+
+.sci-module {
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border:
+        1px solid rgba(0,255,255,.12);
+
+    border-radius: 11px;
+
+    background:
+        rgba(0,255,255,.025);
+
+}
+
+
+.sci-module-title {
+
+    margin-bottom: 10px;
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.sci-module-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 6px;
+
+}
+
+
+.sci-module-grid button {
+
+    min-height: 37px;
+
+    border:
+        1px solid rgba(0,255,255,.13);
+
+    border-radius: 7px;
+
+    background:
+        rgba(0,0,0,.3);
+
+    color:
+        rgba(225,255,255,.8);
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.sci-module-grid button:hover {
+
+    color: #001919;
+
+    background: #00ffff;
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px rgba(0,255,255,.35);
+
+}
+
+
+/*==========================================================
+ * HISTORY
+ *==========================================================*/
+
+.sci-history-panel {
+
+    margin-top: 20px;
+
+    padding: 16px;
+
+}
+
+
+.sci-history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.sci-history-header button {
+
+    border:
+        1px solid rgba(0,255,255,.2);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0,255,255,.04);
+
+    color: #00ffff;
+
+    padding: 7px 12px;
+
+    cursor: pointer;
+
+}
+
+
+.sci-history {
+
+    margin-top: 12px;
+
+    max-height: 200px;
+
+    overflow-y: auto;
+
+}
+
+
+.sci-history-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px;
+
+    margin-bottom: 6px;
+
+    border-left:
+        2px solid #00ffff;
+
+    background:
+        rgba(0,255,255,.025);
+
+    font-size: 13px;
+
+}
+
+
+.sci-history-item span {
+
+    color:
+        rgba(220,255,255,.55);
+
+}
+
+
+.sci-history-item strong {
+
+    color: #00ffff;
+
+}
+
+
+/*==========================================================
+ * RESPONSIVE
+ *==========================================================*/
+
+@media (max-width: 1100px) {
+
+    .sci-main-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .sci-side-panel {
+
+        max-height: none;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sci-container {
+
+        padding: 10px;
+
+    }
+
+    .sci-header {
+
+        padding: 15px;
+
+    }
+
+    .sci-header h1 {
+
+        font-size: 20px;
+
+    }
+
+    .sci-system-status {
+
+        display: none;
+
+    }
+
+    .sci-header-icon {
+
+        width: 45px;
+        height: 45px;
+
+        font-size: 22px;
+
+    }
+
+    .sci-control-row {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+    .sci-key {
+
+        min-height: 52px;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .sci-header-info p {
+
+        display: none;
+
+    }
+
+    .sci-header h1 {
+
+        font-size: 17px;
+
+    }
+
+    .sci-display {
+
+        font-size: 25px;
+
+    }
+
+    .sci-key {
+
+        min-height: 48px;
+
+        font-size: 16px;
+
+    }
+
+    .sci-function-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}

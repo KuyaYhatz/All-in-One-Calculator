@@ -1,0 +1,825 @@
+/*==================================================*
+ * FAQ PAGE
+ * FUTURISTIC AQUA DESIGN
+ *==================================================*/
+
+.ram-faq-page {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 255, 0.10),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(0, 255, 255, 0.05),
+            transparent 30%
+        ),
+
+        #02080c;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/*==================================================*
+ * HEADER
+ *==================================================*/
+
+.ram-faq-header {
+
+    max-width: 1100px;
+
+    margin: 0 auto 45px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 255, 255, 0.08),
+            rgba(0, 20, 25, 0.85)
+        );
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 255, 255, 0.08),
+
+        inset 0 0 25px
+        rgba(0, 255, 255, 0.03);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* SCAN LINE */
+
+.ram-faq-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00ffff,
+            transparent
+        );
+
+    animation:
+        ramFaqScan 4s linear infinite;
+}
+
+
+@keyframes ramFaqScan {
+
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+
+.ram-faq-system {
+
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.35);
+
+    border-radius: 20px;
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+
+}
+
+
+.ram-faq-header h1 {
+
+    margin: 5px 0 12px;
+
+    color: #00ffff;
+
+    font-size: clamp(
+        28px,
+        5vw,
+        48px
+    );
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, 0.7),
+
+        0 0 25px
+        rgba(0, 255, 255, 0.25);
+}
+
+
+.ram-faq-header p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: rgba(
+        220,
+        255,
+        255,
+        0.75
+    );
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/*==================================================*
+ * FAQ SECTION
+ *==================================================*/
+
+.ram-faq-section {
+
+    max-width: 1100px;
+
+    margin:
+        0 auto 50px;
+}
+
+
+/*==================================================*
+ * SECTION TITLE
+ *==================================================*/
+
+.ram-faq-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.18);
+}
+
+
+.ram-faq-section-title span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border:
+        1px solid
+        #00ffff;
+
+    border-radius: 8px;
+
+    color: #00ffff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    background:
+        rgba(0, 255, 255, 0.06);
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.15);
+}
+
+
+.ram-faq-section-title h2 {
+
+    margin: 0;
+
+    color: #00ffff;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+}
+
+
+/*==================================================*
+ * FAQ CARD
+ *==================================================*/
+
+.ram-faq-card {
+
+    position: relative;
+
+    margin-bottom: 14px;
+
+    padding: 22px 25px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.14);
+
+    border-left:
+        3px solid
+        rgba(0, 255, 255, 0.55);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 18, 23, 0.75);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ram-faq-card:hover {
+
+    transform:
+        translateX(5px);
+
+    border-color:
+        rgba(0, 255, 255, 0.45);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.08);
+}
+
+
+.ram-faq-card h3 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+
+.ram-faq-card h3::before {
+
+    content: "▸ ";
+
+    color:
+        #00ffff;
+}
+
+
+.ram-faq-card p {
+
+    margin:
+        0 0 10px;
+
+    color:
+        rgba(
+            220,
+            255,
+            255,
+            0.72
+        );
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.ram-faq-card p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.ram-faq-card strong {
+
+    color:
+        #00ffff;
+
+    font-weight:
+        600;
+}
+
+
+/*==================================================*
+ * LIST
+ *==================================================*/
+
+.ram-faq-card ul {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                200px,
+                1fr
+            )
+        );
+
+    gap:
+        8px 20px;
+
+    margin:
+        15px 0 0;
+
+    padding-left: 20px;
+
+    color:
+        rgba(
+            220,
+            255,
+            255,
+            0.75
+        );
+}
+
+
+.ram-faq-card li {
+
+    padding:
+        5px 0;
+
+    line-height: 1.5;
+}
+
+
+.ram-faq-card li::marker {
+
+    color:
+        #00ffff;
+}
+
+
+/*==================================================*
+ * FINAL QUESTION PANEL
+ *==================================================*/
+
+.ram-faq-final {
+
+    max-width: 900px;
+
+    margin:
+        70px auto 40px;
+
+    padding:
+        40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.3);
+
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 255, 255, 0.09),
+            rgba(0, 10, 15, 0.9)
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(0, 255, 255, 0.08);
+}
+
+
+.ram-faq-final-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin:
+        0 auto 18px;
+
+    border:
+        2px solid
+        #00ffff;
+
+    border-radius: 50%;
+
+    color:
+        #00ffff;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.25);
+}
+
+
+.ram-faq-final h2 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        #00ffff;
+
+    letter-spacing:
+        2px;
+}
+
+
+.ram-faq-final p {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 20px;
+
+    color:
+        rgba(
+            220,
+            255,
+            255,
+            0.72
+        );
+
+    line-height:
+        1.8;
+}
+
+
+.ram-faq-final strong {
+
+    color:
+        #00ffff;
+}
+
+
+.ram-faq-status {
+
+    display:
+        inline-block;
+
+    padding:
+        8px 15px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.3);
+
+    border-radius:
+        20px;
+
+    color:
+        #00ffff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        1.5px;
+
+    background:
+        rgba(
+            0,
+            255,
+            255,
+            0.04
+        );
+}
+
+
+/*==================================================*
+ * FOOTER
+ *==================================================*/
+
+.ram-faq-footer {
+
+    max-width:
+        1100px;
+
+    margin:
+        50px auto 10px;
+
+    padding:
+        20px 0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px 25px;
+
+    border-top:
+        1px solid
+        rgba(
+            0,
+            255,
+            255,
+            0.15
+        );
+
+    color:
+        rgba(
+            0,
+            255,
+            255,
+            0.55
+        );
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/*==================================================*
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 1024px) {
+
+    .ram-faq-page {
+
+        padding:
+            25px;
+    }
+
+
+    .ram-faq-header {
+
+        padding:
+            30px 25px;
+    }
+
+}
+
+
+/*==================================================*
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 700px) {
+
+    .ram-faq-page {
+
+        padding:
+            20px 15px;
+    }
+
+
+    .ram-faq-header {
+
+        padding:
+            25px 18px;
+
+        margin-bottom:
+            30px;
+    }
+
+
+    .ram-faq-header h1 {
+
+        font-size:
+            25px;
+
+        letter-spacing:
+            1.5px;
+    }
+
+
+    .ram-faq-header p {
+
+        font-size:
+            13px;
+    }
+
+
+    .ram-faq-section {
+
+        margin-bottom:
+            35px;
+    }
+
+
+    .ram-faq-section-title h2 {
+
+        font-size:
+            16px;
+    }
+
+
+    .ram-faq-card {
+
+        padding:
+            18px;
+    }
+
+
+    .ram-faq-card h3 {
+
+        font-size:
+            15px;
+    }
+
+
+    .ram-faq-card p {
+
+        font-size:
+            13px;
+    }
+
+
+    .ram-faq-card ul {
+
+        grid-template-columns:
+            1fr;
+
+        font-size:
+            13px;
+    }
+
+
+    .ram-faq-final {
+
+        padding:
+            30px 20px;
+
+        margin-top:
+            45px;
+    }
+
+
+    .ram-faq-footer {
+
+        flex-direction:
+            column;
+
+        gap:
+            8px;
+    }
+
+}
+
+
+/*==================================================*
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .ram-faq-page {
+
+        padding:
+            15px 10px;
+    }
+
+
+    .ram-faq-header {
+
+        padding:
+            20px 15px;
+    }
+
+
+    .ram-faq-header h1 {
+
+        font-size:
+            21px;
+    }
+
+
+    .ram-faq-system {
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            1px;
+    }
+
+
+    .ram-faq-section-title {
+
+        gap:
+            10px;
+    }
+
+
+    .ram-faq-section-title span {
+
+        width:
+            32px;
+
+        height:
+            32px;
+
+        font-size:
+            11px;
+    }
+
+
+    .ram-faq-section-title h2 {
+
+        font-size:
+            14px;
+    }
+
+
+    .ram-faq-card {
+
+        padding:
+            15px;
+    }
+
+}

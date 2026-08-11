@@ -1,0 +1,811 @@
+/*==================================================*
+* GEOMETRY FUTURISTIC CALCULATOR
+*==================================================*/
+
+.geo-future-page {
+
+    width: 100%;
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, 430px)
+        minmax(350px, 1fr);
+
+    gap: 30px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0, 255, 255, .08),
+            transparent 35%
+        ),
+
+        #050b10;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/*==================================================*
+* LEFT PANEL
+*==================================================*/
+
+.geo-calc-panel {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .3);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(9, 29, 35, .96),
+            rgba(3, 10, 15, .98)
+        );
+
+    box-shadow:
+
+        0 0 20px
+        rgba(0, 255, 255, .07),
+
+        inset 0 0 30px
+        rgba(0, 255, 255, .025);
+
+}
+
+
+/*==================================================*
+* HEADER
+*==================================================*/
+
+.geo-calc-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+}
+
+
+.geo-calc-header h1 {
+
+    margin: 0;
+
+    color: aqua;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, .5);
+
+}
+
+
+.geo-calc-header p {
+
+    margin: 6px 0 0;
+
+    color: #638d92;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.geo-header-line {
+
+    width: 25px;
+
+    height: 1px;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 8px aqua;
+
+}
+
+
+/*==================================================*
+* SELECTOR
+*==================================================*/
+
+.geo-selector-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.geo-selector-box label {
+
+    color: #4c9ca3;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.geo-selector-box select {
+
+    width: 100%;
+
+    height: 55px;
+
+    padding: 0 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .2);
+
+    outline: none;
+
+    background:
+        #071216;
+
+    color: aqua;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+.geo-selector-box select:focus {
+
+    border-color: aqua;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .15);
+
+}
+
+
+/*==================================================*
+* INPUT CONTAINER
+*==================================================*/
+
+.geo-input-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.geo-input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.geo-input-group label {
+
+    color: #4c9ca3;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.geo-input-group input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .18);
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, .35);
+
+    color: aqua;
+
+    font-size: 16px;
+
+}
+
+
+.geo-input-group input::placeholder {
+
+    color: #45666b;
+
+}
+
+
+.geo-input-group input:focus {
+
+    border-color: aqua;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .15);
+
+}
+
+
+/*==================================================*
+* CALCULATE BUTTON
+*==================================================*/
+
+.geo-calculate-button {
+
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid aqua;
+
+    background:
+        rgba(0, 255, 255, .06);
+
+    color: aqua;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.geo-calculate-button:hover {
+
+    background: aqua;
+
+    color: #001011;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, .35);
+
+}
+
+
+.geo-calculate-button:active {
+
+    transform:
+        scale(.97);
+
+}
+
+
+.geo-button-arrow {
+
+    font-size: 22px;
+
+}
+
+
+/*==================================================*
+* RESULT
+*==================================================*/
+
+.geo-result-box {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .2);
+
+    background:
+        rgba(0, 255, 255, .025);
+
+    text-align: center;
+
+}
+
+
+.geo-result-label {
+
+    margin-bottom: 8px;
+
+    color: #4c969d;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+#geoResultValue {
+
+    color: aqua;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .5);
+
+}
+
+
+/*==================================================*
+* ERROR
+*==================================================*/
+
+.geo-error-message {
+
+    min-height: 20px;
+
+    margin-top: 12px;
+
+    color: #ff6b6b;
+
+    font-size: 12px;
+
+    text-align: center;
+
+}
+
+
+/*==================================================*
+* RIGHT PANEL
+*==================================================*/
+
+.geo-solution-panel {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .25);
+
+    background:
+        rgba(4, 15, 20, .85);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, .05);
+
+}
+
+
+/*==================================================*
+* SOLUTION HEADER
+*==================================================*/
+
+.geo-solution-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.geo-solution-header h2 {
+
+    margin: 0;
+
+    color: aqua;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.geo-solution-header p {
+
+    margin: 4px 0 0;
+
+    color: #5c858a;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.geo-status-light {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 12px aqua;
+
+}
+
+
+/*==================================================*
+* INFO CARDS
+*==================================================*/
+
+.geo-info-card {
+
+    margin-bottom: 15px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .13);
+
+    background:
+        rgba(0, 255, 255, .025);
+
+}
+
+
+.geo-card-label {
+
+    margin-bottom: 12px;
+
+    color: #4d9ca3;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/*==================================================*
+* FORMULA
+*==================================================*/
+
+.geo-formula-display {
+
+    color: aqua;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    line-height: 1.8;
+
+}
+
+
+/*==================================================*
+* PROBLEM
+*==================================================*/
+
+.geo-problem-display {
+
+    color: #d9ffff;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+.geo-shape-highlight {
+
+    color: aqua;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 255, 255, .4);
+
+}
+
+
+/*==================================================*
+* STEPS
+*==================================================*/
+
+.geo-steps-card {
+
+    min-height: 240px;
+
+}
+
+
+.geo-solution-step {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 11px 0;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, .07);
+
+}
+
+
+.geo-solution-step:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.geo-step-number {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 30px;
+
+    height: 30px;
+
+    border-radius: 6px;
+
+    border: 1px solid aqua;
+
+    color: aqua;
+
+    font-size: 10px;
+
+}
+
+
+.geo-step-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.geo-step-content small {
+
+    color: #4d888e;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.geo-step-content strong {
+
+    color: #dfffff;
+
+    font-size: 13px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+}
+
+
+.geo-empty-step {
+
+    color: #46696d;
+
+    font-size: 13px;
+
+}
+
+
+.geo-empty-step span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 30px;
+
+    height: 30px;
+
+    margin-right: 10px;
+
+    border-radius: 6px;
+
+    border: 1px solid #25484c;
+
+}
+
+
+/*==================================================*
+* FINAL ANSWER
+*==================================================*/
+
+.geo-final-answer {
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid aqua;
+
+    background:
+        rgba(0, 255, 255, .05);
+
+    text-align: center;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, .08);
+
+}
+
+
+.geo-final-answer .geo-card-label {
+
+    margin-bottom: 8px;
+
+}
+
+
+#geoFinalAnswer {
+
+    color: aqua;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .5);
+
+}
+
+
+/*==================================================*
+* RESPONSIVE
+*==================================================*/
+
+@media (max-width: 850px) {
+
+    .geo-future-page {
+
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .geo-calc-panel,
+    .geo-solution-panel {
+
+        padding: 15px;
+
+    }
+
+
+    .geo-calc-header h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    #geoResultValue {
+
+        font-size: 28px;
+
+    }
+
+}

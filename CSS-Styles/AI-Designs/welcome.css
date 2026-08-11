@@ -1,0 +1,836 @@
+/*==================================================*
+* WELCOME FUTURISTIC SCREEN
+* AQUA / CYBER THEME
+*==================================================*/
+
+/*==================================================*
+* WELCOME FUTURE
+* STATIC / NO PAGE SCROLL
+*==================================================*/
+
+.welcome-future {
+
+    position: relative;
+
+    width: 100%;
+    height: calc(-262px + 100vh);
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 255, 255, .08),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 255, 255, .05),
+            transparent 25%
+        ),
+
+        #02080c;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    opacity: 0.9;
+}
+
+
+/*==================================================*
+* GRID BACKGROUND
+*==================================================*/
+
+.welcome-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .18;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 255, 255, .15) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, .15) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        45px 45px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black 20%,
+            transparent 80%
+        );
+
+}
+
+
+/*==================================================*
+* SCAN LINE
+*==================================================*/
+
+.welcome-future::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: -10%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: aqua;
+
+    box-shadow:
+
+        0 0 10px aqua,
+
+        0 0 30px aqua;
+
+    opacity: .45;
+
+    animation:
+        welcomeScan 5s linear infinite;
+
+}
+
+
+@keyframes welcomeScan {
+
+    0% {
+        top: -5%;
+    }
+
+    100% {
+        top: 105%;
+    }
+
+}
+
+
+/*==================================================*
+* SYSTEM STATUS
+*==================================================*/
+
+.welcome-status {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #58a7ad;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.welcome-status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 12px aqua;
+
+    animation:
+        welcomePulse 1.4s infinite;
+
+}
+
+
+@keyframes welcomePulse {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        opacity: .25;
+
+        transform:
+            scale(.7);
+
+    }
+
+}
+
+
+/*==================================================*
+* CONTENT
+*==================================================*/
+
+.welcome-content {
+
+    position: relative;
+    z-index: 5;
+    width: min(
+        850px,
+        90%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 433px;
+
+}
+
+
+/*==================================================*
+* LOGO BOX
+*==================================================*/
+
+.welcome-logo-box {
+
+    position: relative;
+
+    width: 190px;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+/*==================================================*
+* LOGO
+*==================================================*/
+
+.welcome-logo {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 115px;
+
+    height: 115px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid aqua;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 255, 255, .035);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(0, 255, 255, .25),
+
+        inset 0 0 25px
+        rgba(0, 255, 255, .08);
+
+}
+
+
+.welcome-logo img {
+
+    width: 85px;
+
+    height: 85px;
+
+    object-fit: contain;
+
+    filter:
+
+        drop-shadow(
+            0 0 8px
+            rgba(0, 255, 255, .5)
+        );
+
+}
+
+
+/*==================================================*
+* LOGO RINGS
+*==================================================*/
+
+.welcome-logo-ring {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    border: 1px solid
+        rgba(0, 255, 255, .25);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.ring-one {
+
+    width: 140px;
+
+    height: 140px;
+
+    animation:
+        welcomeRotate 6s linear infinite;
+
+}
+
+
+.ring-two {
+
+    width: 170px;
+
+    height: 90px;
+
+    animation:
+        welcomeRotate 9s linear infinite reverse;
+
+}
+
+
+.ring-three {
+
+    width: 190px;
+
+    height: 150px;
+
+    animation:
+        welcomeRotate 13s linear infinite;
+
+}
+
+
+@keyframes welcomeRotate {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/*==================================================*
+* SYSTEM LABEL
+*==================================================*/
+
+.welcome-system-label {
+
+    margin-bottom: 15px;
+
+    color: #3f858b;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+}
+
+
+/*==================================================*
+* TITLE
+*==================================================*/
+
+.welcome-title {
+
+    margin: 0;
+
+    color: #eaffff;
+
+    font-size: clamp(
+        35px,
+        6vw,
+        70px
+    );
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 20px
+        rgba(0, 255, 255, .08);
+
+}
+
+
+.welcome-title span {
+
+    color: aqua;
+
+    text-shadow:
+
+        0 0 10px
+        rgba(0, 255, 255, .4),
+
+        0 0 30px
+        rgba(0, 255, 255, .15);
+
+}
+
+
+/*==================================================*
+* TAGLINE
+*==================================================*/
+
+.welcome-tagline {
+
+    margin: 22px 0 10px;
+
+    color: #77999d;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+}
+
+
+.welcome-tagline span {
+
+    color: #b8dfe2;
+
+}
+
+
+/*==================================================*
+* DESCRIPTION
+*==================================================*/
+
+.welcome-description {
+
+    margin: 10px 0;
+
+    color: #426d72;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/*==================================================*
+* DIVIDER
+*==================================================*/
+
+.welcome-divider {
+
+    position: relative;
+
+    width: 260px;
+
+    height: 1px;
+
+    margin: 25px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            aqua,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 255, 255, .2);
+
+}
+
+
+.welcome-divider span {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 6px;
+
+    height: 6px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    background: aqua;
+
+    box-shadow:
+        0 0 10px aqua;
+
+}
+
+
+/*==================================================*
+* SYSTEM INFO
+*==================================================*/
+
+.welcome-system-info {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 45px;
+
+}
+
+
+.welcome-system-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.welcome-system-info strong {
+
+    color: aqua;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.welcome-system-info small {
+
+    color: #315c61;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/*==================================================*
+* FOOTER
+*==================================================*/
+
+.welcome-footer {
+
+    position: absolute;
+
+    left: 30px;
+
+    right: 30px;
+
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #2f5c61;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.welcome-version {
+
+    color: #3d7b81;
+
+}
+
+
+/*==================================================*
+* CORNER DECORATIONS
+*==================================================*/
+
+.welcome-corner {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-color:
+        rgba(0, 255, 255, .35);
+
+}
+
+
+.welcome-corner-tl {
+
+    top: 25px;
+
+    left: 25px;
+
+    border-top: 1px solid aqua;
+
+    border-left: 1px solid aqua;
+
+}
+
+
+.welcome-corner-tr {
+
+    top: 25px;
+
+    right: 25px;
+
+    border-top: 1px solid aqua;
+
+    border-right: 1px solid aqua;
+
+}
+
+
+.welcome-corner-bl {
+
+    bottom: 25px;
+
+    left: 25px;
+
+    border-bottom: 1px solid aqua;
+
+    border-left: 1px solid aqua;
+
+}
+
+
+.welcome-corner-br {
+
+    bottom: 25px;
+
+    right: 25px;
+
+    border-bottom: 1px solid aqua;
+
+    border-right: 1px solid aqua;
+
+}
+
+
+/*==================================================*
+* RESPONSIVE
+*==================================================*/
+
+@media (max-width: 600px) {
+
+    .welcome-status {
+
+        top: 15px;
+
+        right: 15px;
+
+        font-size: 7px;
+
+    }
+
+
+    .welcome-logo-box {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+
+    .welcome-logo {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+
+    .welcome-logo img {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+
+    .ring-one {
+
+        width: 110px;
+
+        height: 110px;
+
+    }
+
+
+    .ring-two {
+
+        width: 130px;
+
+        height: 75px;
+
+    }
+
+
+    .ring-three {
+
+        width: 150px;
+
+        height: 115px;
+
+    }
+
+
+    .welcome-system-label {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .welcome-tagline {
+
+        font-size: 14px;
+
+    }
+
+
+    .welcome-system-info {
+
+        gap: 10px;
+        height: 5px;
+
+    }
+
+
+    .welcome-footer {
+        left: 15px;
+        right: 15px;
+        font-size: 7px;
+        display: none;
+    }
+
+
+    .welcome-corner {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+}

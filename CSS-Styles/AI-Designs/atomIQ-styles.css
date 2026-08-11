@@ -1,0 +1,1307 @@
+/*==================================================*
+ * COMBINATION SYSTEM
+ * FUTURISTIC AQUA SCIENCE INTERFACE
+ * LEFT + RIGHT FIXED PANEL
+ *==================================================*/
+
+.combination-container {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    color: #d9ffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/*==================================================*
+ * TITLE
+ *==================================================*/
+
+.combination-title {
+    position: relative;
+
+    margin-bottom: 10px;
+    padding: 10px 22px;
+
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    border-radius: 12px;
+
+    background: rgba(1, 37, 37, 0.658);
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 255, 0.06);
+
+    overflow: hidden;
+}
+
+.combination-title::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            aqua,
+            transparent
+        );
+}
+
+.combination-title h1 {
+    margin: 0 0 6px;
+
+    color: aqua;
+
+    font-size: 26px;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px rgba(0, 255, 255, 0.6);
+}
+
+.combination-title p {
+    margin: 0;
+
+    color: #83aeb2;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/*==================================================*
+ * MAIN LAYOUT
+ *==================================================*/
+
+.combination-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+
+    height:
+        calc(100% - 78px);
+
+    min-height: 0;
+
+    box-sizing: border-box;
+}
+
+
+/*==================================================*
+ * LEFT PANEL
+ *==================================================*/
+
+.combination-builder {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 16px;
+
+    background:
+        rgba(1, 37, 37, 0.658);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, 0.06),
+
+        inset 0 0 20px
+        rgba(0, 255, 255, 0.025);
+
+    overflow: hidden;
+}
+
+
+/*==================================================*
+ * LEFT STATIC BUILDER
+ *==================================================*/
+
+.combination-builder-static {
+    width: 100%;
+
+    flex-shrink: 0;
+}
+
+.combination-builder h2 {
+    margin: 0 0 6px;
+
+    color: aqua;
+
+    font-size: 20px;
+}
+
+.combination-builder-static > p {
+    margin: 0 0 15px;
+
+    color: #6f969a;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/*==================================================*
+ * ELEMENT INPUT CONTAINER
+ *==================================================*/
+
+#elementInputs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    width: 100%;
+
+    flex-shrink: 0;
+}
+
+.element-input {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    flex-shrink: 0;
+}
+
+
+/*==================================================*
+ * ELEMENT TEXT INPUT
+ *==================================================*/
+
+.combine-input {
+    flex: 1;
+
+    min-width: 0;
+
+    width: 100%;
+    height: 40px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.18);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background:
+        rgba(0, 255, 255, 0.025);
+
+    color: aqua;
+
+    font-size: 13px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    transition:
+        border 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.combine-input::placeholder {
+    color: #476e72;
+}
+
+.combine-input:focus {
+    border-color: aqua;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.12);
+}
+
+
+/*==================================================*
+ * NUMBER / ATOM COUNT
+ *==================================================*/
+
+.element-count-select {
+    width: 70px;
+    min-width: 70px;
+
+    height: 40px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background:
+        rgba(0, 20, 25, 0.95);
+
+    color: #00ffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        inset 0 0 8px
+        rgba(0, 255, 255, 0.05);
+}
+
+.element-count-select:hover {
+    border-color:
+        rgba(0, 255, 255, 0.65);
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 255, 255, 0.20);
+}
+
+.element-count-select:focus {
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.35);
+}
+
+.element-count-select option {
+    background: #012525;
+
+    color: #00ffff;
+}
+
+
+/*==================================================*
+ * REMOVE BUTTON
+ *==================================================*/
+
+.remove-element-button {
+    width: 40px;
+    height: 40px;
+
+    flex:
+        0 0 40px;
+
+    border:
+        1px solid
+        rgba(255, 80, 100, 0.25);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 50, 80, 0.04);
+
+    color: #ff6b7d;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.remove-element-button:hover {
+    background:
+        rgba(255, 50, 80, 0.12);
+
+    border-color: #ff6b7d;
+
+    box-shadow:
+        0 0 12px
+        rgba(255, 80, 100, 0.2);
+}
+
+
+/*==================================================*
+ * ACTION BUTTONS
+ *==================================================*/
+
+.combination-actions {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+    width: 100%;
+}
+
+.add-element-button,
+.combine-button {
+    width: 100%;
+    height: 42px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.25s ease;
+}
+
+.add-element-button {
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    background:
+        rgba(0, 255, 255, 0.04);
+
+    color: #8ccdd1;
+}
+
+.add-element-button:hover {
+    background:
+        rgba(0, 255, 255, 0.10);
+
+    border-color: aqua;
+
+    color: aqua;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.12);
+}
+
+.combine-button {
+    border:
+        1px solid aqua;
+
+    background: aqua;
+
+    color: #00191b;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.15);
+}
+
+.combine-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, 0.35);
+}
+
+
+/*==================================================*
+ * PREVIEW
+ *==================================================*/
+
+.combination-preview {
+    margin-top: 14px;
+
+    padding: 14px;
+
+    min-height: 45px;
+
+    box-sizing: border-box;
+
+    border:
+        1px dashed
+        rgba(0, 255, 255, 0.18);
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 255, 255, 0.025);
+
+    color: #527d81;
+
+    font-size: 12px;
+}
+
+.combination-preview-title {
+    color: #83b9bd;
+
+    font-size: 11px;
+}
+
+.combination-preview-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.preview-element-item {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0, 255, 255, 0.05);
+
+    color: #00ffff;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.08);
+}
+
+
+/*==================================================*
+ * LEFT ELEMENT INFORMATION
+ *==================================================*/
+
+.combination-element-details {
+    margin-top: 15px;
+
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    flex:
+        1 1 auto;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding-right: 7px;
+
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        aqua
+        rgba(0, 255, 255, 0.08);
+}
+
+.element-information-box {
+    width: 100%;
+
+    padding: 17px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.13);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 255, 255, 0.025);
+}
+
+.element-information-box h3 {
+    margin: 0 0 14px;
+
+    color: aqua;
+
+    font-size: 15px;
+}
+
+
+/*==================================================*
+ * ELEMENT CARDS
+ *==================================================*/
+
+.combination-element-list {
+    display: grid;
+
+    gap: 10px;
+}
+
+.combination-element-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.10);
+
+    border-radius: 9px;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+
+    transition: 0.25s ease;
+}
+
+.combination-element-card:hover {
+    border-color:
+        rgba(0, 255, 255, 0.4);
+
+    background:
+        rgba(0, 255, 255, 0.04);
+
+    transform:
+        translateX(3px);
+}
+
+.element-card-symbol {
+    width: 55px;
+    height: 55px;
+
+    flex:
+        0 0 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid aqua;
+
+    border-radius: 8px;
+
+    color: aqua;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 10px aqua;
+
+    box-shadow:
+        inset 0 0 15px
+        rgba(0, 255, 255, 0.05),
+
+        0 0 10px
+        rgba(0, 255, 255, 0.08);
+}
+
+.element-card-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.element-card-info h4 {
+    margin:
+        0 0 7px;
+
+    color:
+        #d9ffff;
+
+    font-size: 14px;
+}
+
+.element-card-info p {
+    margin:
+        4px 0;
+
+    color:
+        #618b8f;
+
+    font-size: 11px;
+}
+
+.element-card-info strong {
+    color:
+        #9decef;
+}
+
+
+/*==================================================*
+ * EMPTY ELEMENT DETAILS
+ *==================================================*/
+
+.empty-element-details {
+    padding:
+        30px 15px;
+
+    text-align: center;
+
+    border:
+        1px dashed
+        rgba(0, 255, 255, 0.12);
+
+    border-radius: 9px;
+}
+
+.empty-element-icon {
+    font-size: 30px;
+
+    color:
+        aqua;
+
+    text-shadow:
+        0 0 15px aqua;
+}
+
+.empty-element-details h3 {
+    margin:
+        10px 0 5px;
+
+    color:
+        #9cecef;
+
+    font-size: 14px;
+}
+
+.empty-element-details p {
+    margin: 0;
+
+    color:
+        #547b7f;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/*==================================================*
+ * RIGHT PANEL
+ *==================================================*/
+
+.substance-details {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 16px;
+
+    background:
+        rgba(1, 37, 37, 0.658);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, 0.06),
+
+        inset 0 0 20px
+        rgba(0, 255, 255, 0.025);
+
+    overflow: hidden;
+}
+
+
+/*==================================================*
+ * STATIC ATOMIQ PROFILE
+ * THIS APPEARS ONLY ONCE
+ *==================================================*/
+
+.combination-atomiq-static {
+    width: 100%;
+
+    flex:
+        0 0 auto;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    box-sizing: border-box;
+}
+
+.atomIQ-profile {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+.atomIQ-avatar {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex:
+        0 0 50px;
+
+    border:
+        1px solid aqua;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 255, 255, 0.04);
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.12);
+}
+
+.atomIQ-avatar img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+.atomIQ-profile h3 {
+    margin:
+        0 0 3px;
+
+    color:
+        aqua;
+
+    font-size: 17px;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.35);
+}
+
+.atomIQ-profile span {
+    color:
+        #527d81;
+
+    font-size: 10px;
+}
+
+
+/*==================================================*
+ * ATOMIQ RESPONSE AREA
+ * ONLY THIS PART SCROLLS
+ *==================================================*/
+
+#atomIQResponseContent {
+    flex:
+        1 1 auto;
+
+    width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding:
+        18px 8px 15px 0;
+
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        aqua
+        rgba(0, 255, 255, 0.08);
+}
+
+
+/*==================================================*
+ * ATOMIQ MESSAGE
+ *==================================================*/
+
+.atomIQ-message {
+    width: 100%;
+
+    color:
+        #8db4b8;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.atomIQ-message strong {
+    color:
+        aqua;
+}
+
+
+/*==================================================*
+ * RESULT
+ *==================================================*/
+
+.atomIQ-result {
+    margin:
+        15px 0;
+
+    padding:
+        17px;
+
+    border-left:
+        3px solid aqua;
+
+    border-top:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    border-right:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 255, 255, 0.035);
+
+    box-sizing: border-box;
+}
+
+.atomIQ-result h3 {
+    margin:
+        0 0 10px;
+
+    color:
+        aqua;
+
+    font-size: 14px;
+}
+
+
+/*==================================================*
+ * FORMULA
+ *==================================================*/
+
+.atomIQ-formula {
+    padding:
+        12px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0, 0, 0, 0.2);
+
+    color:
+        #e0ffff;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.5);
+
+    box-sizing: border-box;
+}
+
+
+/*==================================================*
+ * EXPLANATION / SUPPORT
+ *==================================================*/
+
+.atomIQ-explanation,
+.atomIQ-support {
+    margin-top: 12px;
+
+    padding:
+        15px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 255, 255, 0.02);
+
+    box-sizing: border-box;
+}
+
+.atomIQ-explanation h3,
+.atomIQ-support h3 {
+    margin:
+        0 0 7px;
+
+    color:
+        #9becef;
+
+    font-size: 13px;
+}
+
+.atomIQ-explanation p,
+.atomIQ-support p {
+    margin:
+        6px 0;
+
+    color:
+        #648d91;
+}
+
+
+/*==================================================*
+ * CHEMICAL EQUATION
+ *==================================================*/
+
+.chemical-equation {
+    padding:
+        18px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.18);
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 0, 0, 0.22);
+
+    color:
+        #e4ffff;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, 0.4);
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+}
+
+
+/*==================================================*
+ * EMPTY ATOMIQ
+ *==================================================*/
+
+.empty-substance {
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    padding: 20px;
+}
+
+.empty-substance > div:first-child {
+    font-size: 55px;
+
+    margin-bottom: 12px;
+
+    color:
+        aqua;
+
+    text-shadow:
+        0 0 20px aqua;
+}
+
+.empty-substance h3 {
+    margin:
+        0 0 8px;
+
+    color:
+        aqua;
+
+    font-size: 22px;
+
+    text-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.5);
+}
+
+.empty-substance p {
+    max-width: 300px;
+
+    margin: 0;
+
+    color:
+        #628b8f;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/*==================================================*
+ * INPUT ERROR
+ *==================================================*/
+
+.combine-input-error {
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+        #ff7180;
+
+    font-size: 9px;
+}
+
+
+/*==================================================*
+ * SCROLLBAR
+ *==================================================*/
+
+.combination-element-details::-webkit-scrollbar,
+#atomIQResponseContent::-webkit-scrollbar {
+    width: 7px;
+}
+
+.combination-element-details::-webkit-scrollbar-track,
+#atomIQResponseContent::-webkit-scrollbar-track {
+    background:
+        rgba(0, 255, 255, 0.04);
+
+    border-radius: 10px;
+}
+
+.combination-element-details::-webkit-scrollbar-thumb,
+#atomIQResponseContent::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            180deg,
+            #00ffff,
+            #008b8b
+        );
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 255, 255, 0.7);
+}
+
+.combination-element-details::-webkit-scrollbar-thumb:hover,
+#atomIQResponseContent::-webkit-scrollbar-thumb:hover {
+    background:
+        #00ffff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.9);
+}
+
+
+/*==================================================*
+ * RESPONSIVE
+ *==================================================*/
+
+@media (max-width: 1000px) {
+
+    .combination-container {
+        height: auto;
+        min-height: 100%;
+
+        overflow: visible;
+    }
+
+    .combination-layout {
+        grid-template-columns:
+            1fr;
+
+        height: auto;
+
+        gap: 20px;
+
+        overflow: visible;
+    }
+
+    .combination-builder,
+    .substance-details {
+        width: 100%;
+
+        height: 650px;
+        min-height: 650px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .combination-container {
+        padding: 5px;
+
+        height: auto;
+
+        overflow: visible;
+    }
+
+    .combination-title {
+        padding: 16px;
+    }
+
+    .combination-title h1 {
+        font-size: 21px;
+    }
+
+    .combination-layout {
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        height: auto;
+    }
+
+    .combination-builder,
+    .substance-details {
+        width: 100%;
+
+        height: 600px;
+        min-height: 600px;
+
+        padding: 15px;
+    }
+
+    .combination-actions {
+        grid-template-columns:
+            1fr;
+    }
+
+    .combination-element-card {
+        flex-direction: column;
+    }
+
+    .element-card-symbol {
+        width: 50px;
+        height: 50px;
+    }
+
+    .element-input {
+        gap: 6px;
+    }
+
+    .element-count-select {
+        width: 60px;
+        min-width: 60px;
+    }
+
+    .remove-element-button {
+        width: 36px;
+        height: 40px;
+
+        flex-basis: 36px;
+    }
+
+    .atomIQ-profile {
+        justify-content: flex-start;
+    }
+
+    .empty-substance h3 {
+        font-size: 20px;
+    }
+}

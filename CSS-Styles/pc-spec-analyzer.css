@@ -1,0 +1,827 @@
+/*==================================================*
+ * SYSTEM CORE
+ * PC SPEC ANALYZER
+ * FUTURISTIC AQUA THEME
+ * PREFIX: PCSA
+ *==================================================*/
+
+.pcsa-container {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0,255,255,.08),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(0,255,255,.05),
+            transparent 30%
+        );
+}
+
+
+/*==================================================*
+ * HEADER
+ *==================================================*/
+
+.pcsa-header {
+
+    position: relative;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(0,255,255,.25);
+
+    border-left: 4px solid #00ffff;
+
+    background:
+        rgba(0,20,25,.75);
+
+    box-shadow:
+        0 0 25px rgba(0,255,255,.08);
+
+}
+
+
+.pcsa-system-tag {
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.pcsa-header h1 {
+
+    margin: 0;
+
+    color: #00ffff;
+
+    font-size: 32px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(0,255,255,.7);
+}
+
+
+.pcsa-header p {
+
+    margin: 10px 0 0;
+
+    color: #9edada;
+
+}
+
+
+.pcsa-status {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 25px;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(0,255,255,.4);
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.pcsa-status span {
+
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+
+/*==================================================*
+ * MAIN LAYOUT
+ *==================================================*/
+
+.pcsa-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 360px)
+        1fr;
+
+    gap: 20px;
+
+}
+
+
+/*==================================================*
+ * PANELS
+ *==================================================*/
+
+.pcsa-input-panel,
+.pcsa-analysis-panel {
+
+    background:
+        rgba(0,15,20,.82);
+
+    border:
+        1px solid rgba(0,255,255,.18);
+
+    padding: 20px;
+
+    box-shadow:
+        inset 0 0 30px rgba(0,255,255,.025),
+        0 0 20px rgba(0,255,255,.05);
+
+}
+
+
+.pcsa-panel-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #00ffff;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+
+.pcsa-panel-title span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 28px;
+
+    height: 28px;
+
+    background:
+        rgba(0,255,255,.1);
+
+    border:
+        1px solid rgba(0,255,255,.35);
+
+    font-size: 12px;
+}
+
+
+/*==================================================*
+ * INPUT
+ *==================================================*/
+
+.pcsa-field {
+
+    position: relative;
+
+    margin-bottom: 15px;
+}
+
+
+.pcsa-field label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8acccc;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.pcsa-field input,
+.pcsa-field select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid rgba(0,255,255,.25);
+
+    background:
+        rgba(0,0,0,.45);
+
+    color: #dfffff;
+
+    outline: none;
+
+    border-radius: 3px;
+
+    transition: .25s;
+}
+
+
+.pcsa-field input:focus,
+.pcsa-field select:focus {
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px rgba(0,255,255,.2);
+}
+
+
+.pcsa-unit {
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 12px;
+
+    color: #00ffff;
+
+    font-size: 11px;
+}
+
+
+/*==================================================*
+ * ANALYZE BUTTON
+ *==================================================*/
+
+.pcsa-analyze-btn,
+.pcsa-tool-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #00ffff;
+
+    background:
+        rgba(0,255,255,.08);
+
+    color: #00ffff;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: .25s;
+}
+
+
+.pcsa-analyze-btn:hover,
+.pcsa-tool-button:hover {
+
+    background: #00ffff;
+
+    color: #001414;
+
+    box-shadow:
+        0 0 20px rgba(0,255,255,.35);
+}
+
+
+/*==================================================*
+ * IDLE
+ *==================================================*/
+
+.pcsa-idle {
+
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.pcsa-idle-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(0,255,255,.7)
+        );
+}
+
+
+.pcsa-idle h2 {
+
+    color: #00ffff;
+
+    margin: 5px;
+}
+
+
+.pcsa-idle p {
+
+    color: #719b9b;
+}
+
+
+/*==================================================*
+ * ANALYSIS GRID
+ *==================================================*/
+
+.pcsa-result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+.pcsa-result-card,
+.pcsa-rating-card {
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(0,255,255,.18);
+
+    background:
+        rgba(0,255,255,.025);
+}
+
+
+.pcsa-result-card span,
+.pcsa-rating-card span {
+
+    display: block;
+
+    color: #72aaaa;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+.pcsa-result-card strong,
+.pcsa-rating-card strong {
+
+    display: block;
+
+    color: #00ffff;
+
+    font-size: 22px;
+
+    text-shadow:
+        0 0 8px rgba(0,255,255,.4);
+}
+
+
+.pcsa-result-card small {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: #709595;
+}
+
+
+.pcsa-rating-card {
+
+    grid-column: span 2;
+
+    text-align: center;
+
+    border-color:
+        rgba(0,255,255,.45);
+
+    box-shadow:
+        0 0 20px rgba(0,255,255,.07);
+}
+
+
+.pcsa-rating-card strong {
+
+    font-size: 40px;
+}
+
+
+.pcsa-analysis-note {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-left:
+        3px solid #00ffff;
+
+    background:
+        rgba(0,255,255,.035);
+
+    color: #6f9c9c;
+
+    font-size: 12px;
+}
+
+
+.pcsa-analysis-note span {
+
+    color: #00ffff;
+}
+
+
+/*==================================================*
+ * TOOLS
+ *==================================================*/
+
+.pcsa-tools-section {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background:
+        rgba(0,15,20,.82);
+
+    border:
+        1px solid rgba(0,255,255,.18);
+}
+
+
+.pcsa-tools-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.pcsa-tool-card {
+
+    min-height: 125px;
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(0,255,255,.18);
+
+    background:
+        rgba(0,0,0,.35);
+
+    color: #dfffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.pcsa-tool-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 18px rgba(0,255,255,.15);
+}
+
+
+.pcsa-tool-card span {
+
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.pcsa-tool-card strong {
+
+    display: block;
+
+    color: #00ffff;
+
+    margin-bottom: 6px;
+}
+
+
+.pcsa-tool-card small {
+
+    color: #6f9999;
+}
+
+
+/*==================================================*
+ * TOOL OUTPUT
+ *==================================================*/
+
+.pcsa-tool-output {
+
+    margin-top: 20px;
+}
+
+
+.pcsa-tool-box {
+
+    padding: 25px;
+
+    background:
+        rgba(0,15,20,.9);
+
+    border:
+        1px solid rgba(0,255,255,.25);
+
+    box-shadow:
+        0 0 25px rgba(0,255,255,.05);
+}
+
+
+.pcsa-tool-box h2 {
+
+    margin-top: 0;
+
+    color: #00ffff;
+
+    text-shadow:
+        0 0 8px rgba(0,255,255,.4);
+}
+
+
+.pcsa-tool-box p {
+
+    color: #82a9a9;
+}
+
+
+.pcsa-tool-form {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+
+.pcsa-tool-form input,
+.pcsa-tool-form select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(0,0,0,.5);
+
+    border:
+        1px solid rgba(0,255,255,.2);
+
+    color: white;
+
+    outline: none;
+}
+
+
+.pcsa-tool-form input:focus,
+.pcsa-tool-form select:focus {
+
+    border-color: #00ffff;
+}
+
+
+.pcsa-tool-result {
+
+    margin-top: 18px;
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(0,255,255,.2);
+
+    background:
+        rgba(0,255,255,.025);
+
+    color: #9ddada;
+}
+
+
+.pcsa-tool-result strong {
+
+    display: block;
+
+    color: #00ffff;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+/*==================================================*
+ * BUDGET
+ *==================================================*/
+
+.pcsa-budget-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.pcsa-budget-grid div {
+
+    padding: 15px;
+
+    border:
+        1px solid rgba(0,255,255,.15);
+
+    color: #75a2a2;
+}
+
+
+.pcsa-budget-grid strong {
+
+    margin-top: 6px;
+
+    font-size: 18px;
+}
+
+
+/*==================================================*
+ * ERROR
+ *==================================================*/
+
+.pcsa-error {
+
+    padding: 20px;
+
+    border:
+        1px solid rgba(255,80,80,.4);
+
+    color: #ff8080;
+
+    background:
+        rgba(255,0,0,.05);
+}
+
+
+/*==================================================*
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 900px) {
+
+    .pcsa-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pcsa-tools-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/*==================================================*
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 600px) {
+
+    .pcsa-container {
+
+        padding: 12px;
+
+    }
+
+
+    .pcsa-header {
+
+        padding: 18px;
+
+    }
+
+
+    .pcsa-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .pcsa-status {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 15px;
+
+    }
+
+
+    .pcsa-result-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pcsa-rating-card {
+
+        grid-column: span 1;
+
+    }
+
+
+    .pcsa-tools-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pcsa-tool-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pcsa-budget-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

@@ -1,0 +1,749 @@
+/*==================================================*
+* LCM FUTURISTIC CALCULATOR
+*==================================================*/
+
+.lcm-future-page {
+
+    width: 100%;
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, 430px)
+        minmax(350px, 1fr);
+
+    gap: 30px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0, 255, 255, 0.08),
+            transparent 35%
+        ),
+
+        #050b10;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/*==================================================*
+* LEFT SIDE
+*==================================================*/
+
+.lcm-calc-panel {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.3);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(9, 29, 35, 0.96),
+            rgba(3, 10, 15, 0.98)
+        );
+
+    box-shadow:
+
+        0 0 20px
+        rgba(0, 255, 255, 0.07),
+
+        inset 0 0 30px
+        rgba(0, 255, 255, 0.025);
+
+}
+
+
+/*==================================================*
+* HEADER
+*==================================================*/
+
+.lcm-calc-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+}
+
+
+.lcm-calc-header h1 {
+
+    margin: 0;
+
+    color: aqua;
+
+    font-size: 25px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px
+        rgba(0, 255, 255, .5);
+
+}
+
+
+.lcm-calc-header p {
+
+    margin: 6px 0 0;
+
+    color: #648d93;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.lcm-header-line {
+
+    width: 25px;
+
+    height: 1px;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 8px aqua;
+
+}
+
+
+/*==================================================*
+* INPUT AREA
+*==================================================*/
+
+.lcm-input-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lcm-input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.lcm-input-group label {
+
+    color: #4b9da5;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.lcm-input-group input {
+
+    width: 100%;
+
+    height: 55px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .2);
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, .35);
+
+    color: aqua;
+
+    font-size: 18px;
+
+    transition: .2s ease;
+
+}
+
+
+.lcm-input-group input::placeholder {
+
+    color: #426267;
+
+}
+
+
+.lcm-input-group input:focus {
+
+    border-color: aqua;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .15);
+
+}
+
+
+/*==================================================*
+* CALCULATE BUTTON
+*==================================================*/
+
+.lcm-calculate-btn {
+
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid aqua;
+
+    background:
+        rgba(0, 255, 255, .06);
+
+    color: aqua;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.lcm-calculate-btn:hover {
+
+    background: aqua;
+
+    color: #001011;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, .35);
+
+}
+
+
+.lcm-calculate-btn:active {
+
+    transform:
+        scale(.97);
+
+}
+
+
+.lcm-arrow {
+
+    font-size: 22px;
+
+}
+
+
+/*==================================================*
+* RESULT
+*==================================================*/
+
+.lcm-result-display {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    border: 1px solid
+        rgba(0, 255, 255, .2);
+
+    background:
+        rgba(0, 255, 255, .025);
+
+}
+
+
+.lcm-result-label {
+
+    margin-bottom: 8px;
+
+    color: #4c969d;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+#lcmResultValue {
+
+    color: aqua;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .5);
+
+}
+
+
+/*==================================================*
+* ERROR
+*==================================================*/
+
+.lcm-error-message {
+
+    min-height: 2px;
+
+    margin-top: 12px;
+
+    color: #ff6b6b;
+
+    font-size: 12px;
+
+    text-align: center;
+
+}
+
+
+/*==================================================*
+* RIGHT SIDE
+*==================================================*/
+
+.lcm-solution-panel {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .25);
+
+    background:
+        rgba(4, 15, 20, .85);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, .05);
+
+}
+
+
+/*==================================================*
+* SOLUTION HEADER
+*==================================================*/
+
+.lcm-solution-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.lcm-solution-header h2 {
+
+    margin: 0;
+
+    color: aqua;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.lcm-solution-header p {
+
+    margin: 4px 0 0;
+
+    color: #5c858a;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.lcm-status-light {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: aqua;
+
+    box-shadow:
+        0 0 12px aqua;
+
+}
+
+
+/*==================================================*
+* INFORMATION CARDS
+*==================================================*/
+
+.lcm-info-card {
+
+    margin-bottom: 15px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    border: 1px solid
+        rgba(0, 255, 255, .13);
+
+    background:
+        rgba(0, 255, 255, .025);
+
+}
+
+
+.lcm-card-label {
+
+    margin-bottom: 12px;
+
+    color: #4d9ca3;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/*==================================================*
+* FORMULA
+*==================================================*/
+
+.lcm-formula-display {
+
+    color: aqua;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    line-height: 1.7;
+
+}
+
+
+.lcm-formula-display span {
+
+    color: #dfffff;
+
+}
+
+
+/*==================================================*
+* PROBLEM
+*==================================================*/
+
+.lcm-problem-display {
+
+    color: #d9ffff;
+    font-size: 14px;
+
+}
+
+
+.lcm-number-highlight {
+
+    color: aqua;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 8px
+        rgba(0, 255, 255, .4);
+
+}
+
+
+/*==================================================*
+* STEP-BY-STEP
+*==================================================*/
+
+.lcm-steps-card {
+
+    min-height: 187px;
+
+}
+
+
+.lcm-solution-step {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid
+        rgba(0, 255, 255, .07);
+
+}
+
+
+.lcm-solution-step:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.lcm-step-number {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 30px;
+
+    height: 30px;
+
+    border-radius: 6px;
+
+    border: 1px solid aqua;
+
+    color: aqua;
+
+    font-size: 10px;
+
+}
+
+
+.lcm-step-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.lcm-step-content small {
+
+    color: #4d888e;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.lcm-step-content strong {
+
+    color: #dfffff;
+
+    font-size: 14px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+}
+
+
+.lcm-empty-step {
+
+    color: #46696d;
+
+    font-size: 13px;
+
+}
+
+
+.lcm-empty-step span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 30px;
+
+    height: 30px;
+
+    margin-right: 10px;
+
+    border-radius: 6px;
+
+    border: 1px solid #25484c;
+
+    color: #52787c;
+
+}
+
+
+/*==================================================*
+* FINAL ANSWER
+*==================================================*/
+
+.lcm-final-answer {
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid aqua;
+
+    background:
+        rgba(0, 255, 255, .05);
+
+    text-align: center;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, .08);
+
+}
+
+
+.lcm-final-answer .lcm-card-label {
+
+    margin-bottom: 7px;
+
+}
+
+
+#lcmFinalAnswer {
+
+    color: aqua;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 255, 255, .5);
+
+}
+
+
+/*==================================================*
+* RESPONSIVE
+*==================================================*/
+
+@media (max-width: 850px) {
+
+    .lcm-future-page {
+
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 360px) {
+
+    .lcm-calc-panel,
+    .lcm-solution-panel {
+        padding: 15px;
+    }
+
+
+    .lcm-calc-header h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    #lcmResultValue {
+
+        font-size: 30px;
+
+    }
+
+}

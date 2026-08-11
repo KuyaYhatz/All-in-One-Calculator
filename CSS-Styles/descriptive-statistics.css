@@ -1,0 +1,1100 @@
+/*==================================================*
+ * DESCRIPTIVE STATISTICS
+ * FUTURISTIC AQUA THEME
+ *
+ * PREFIX:
+ * dst-
+ *==================================================*/
+
+
+/*==================================================*
+ * CONTAINER
+ *==================================================*/
+
+.dst-container {
+
+    width: 100%;
+    min-height: 100%;
+
+    box-sizing: border-box;
+
+    color: #dfffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/*==================================================*
+ * HEADER
+ *==================================================*/
+
+.dst-header {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 255, 0.08),
+            rgba(0, 20, 25, 0.88)
+        );
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+.dst-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00ffff,
+            transparent
+        );
+
+}
+
+
+.dst-header-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.dst-badge {
+
+    display: inline-block;
+
+    padding:
+        6px 12px;
+
+    margin-bottom: 10px;
+
+    color: #00ffff;
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.35);
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.dst-header h1 {
+
+    margin:
+        5px 0 8px;
+
+    color: #00ffff;
+
+    font-size: clamp(
+        24px,
+        4vw,
+        36px
+    );
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px
+        rgba(0, 255, 255, 0.45);
+
+}
+
+
+.dst-header p {
+
+    margin: 0;
+
+    max-width: 850px;
+
+    color:
+        rgba(223, 255, 255, 0.7);
+
+    line-height: 1.6;
+
+}
+
+
+/*==================================================*
+ * MAIN LAYOUT
+ *==================================================*/
+
+.dst-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        260px
+        minmax(0, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+
+}
+
+
+/*==================================================*
+ * MENU
+ *==================================================*/
+
+.dst-menu {
+
+    height: fit-content;
+
+    padding: 12px;
+
+    background:
+        rgba(0, 12, 16, 0.92);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.05);
+
+}
+
+
+.dst-menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        12px 10px;
+
+    margin-bottom: 8px;
+
+    color: #00ffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.dst-menu-header small {
+
+    color:
+        rgba(0, 255, 255, 0.45);
+
+}
+
+
+/*==================================================*
+ * NAVIGATION
+ *==================================================*/
+
+.dst-nav {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-bottom: 6px;
+
+    padding:
+        10px 12px;
+
+    gap: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color:
+        rgba(223, 255, 255, 0.72);
+
+    text-align: left;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dst-nav:hover {
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    color: #00ffff;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+.dst-nav.active {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.15),
+            rgba(0, 255, 255, 0.04)
+        );
+
+    color: #00ffff;
+
+    border-left:
+        3px solid
+        #00ffff;
+
+    box-shadow:
+        inset 10px 0 25px
+        rgba(0, 255, 255, 0.03);
+
+}
+
+
+.dst-nav-icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    min-width: 30px;
+
+    height: 30px;
+
+    color: #00ffff;
+
+    background:
+        rgba(0, 255, 255, 0.07);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.18);
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+}
+
+
+/*==================================================*
+ * CALCULATOR
+ *==================================================*/
+
+.dst-calculator {
+
+    min-width: 0;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 18, 23, 0.92),
+            rgba(0, 7, 10, 0.95)
+        );
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 255, 255, 0.06);
+
+}
+
+
+/*==================================================*
+ * CALCULATOR HEADER
+ *==================================================*/
+
+.dst-calculator-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.dst-calculator-icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    min-width: 58px;
+
+    height: 58px;
+
+    color: #00ffff;
+
+    background:
+        rgba(0, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.3);
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 255, 255, 0.08);
+
+}
+
+
+.dst-calculator-label {
+
+    color:
+        rgba(0, 255, 255, 0.55);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.dst-calculator-header h2 {
+
+    margin:
+        4px 0;
+
+    color: #00ffff;
+
+    font-size: 25px;
+
+}
+
+
+.dst-calculator-header p {
+
+    margin: 0;
+
+    color:
+        rgba(223, 255, 255, 0.6);
+
+    font-size: 13px;
+
+}
+
+
+/*==================================================*
+ * DATA FIELD
+ *==================================================*/
+
+.dst-data-field {
+
+    margin-bottom: 18px;
+
+}
+
+
+.dst-data-field label,
+.dst-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        rgba(0, 255, 255, 0.75);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.dst-data-field textarea {
+
+    width: 100%;
+
+    min-height: 130px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.35);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    border-radius: 9px;
+
+    color: #dfffff;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dst-data-field textarea:focus {
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.1);
+
+}
+
+
+.dst-data-field small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color:
+        rgba(223, 255, 255, 0.4);
+
+    font-size: 11px;
+
+}
+
+
+/*==================================================*
+ * FORM GRID
+ *==================================================*/
+
+.dst-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                180px,
+                1fr
+            )
+        );
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.dst-field {
+
+    min-width: 0;
+
+}
+
+
+.dst-field input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.35);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.2);
+
+    border-radius: 8px;
+
+    color: #dfffff;
+
+    font-size: 14px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dst-field input:focus {
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.1);
+
+}
+
+
+/*==================================================*
+ * OPTION GRID
+ *==================================================*/
+
+.dst-option-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.dst-radio {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        10px 14px;
+
+    color:
+        rgba(223, 255, 255, 0.7);
+
+    background:
+        rgba(0, 255, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.15);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.dst-radio input {
+
+    accent-color: #00ffff;
+
+}
+
+
+/*==================================================*
+ * CALCULATE BUTTON
+ *==================================================*/
+
+.dst-calculate {
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.5);
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.13),
+            rgba(0, 255, 255, 0.05)
+        );
+
+    color: #00ffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.dst-calculate:hover {
+
+    background:
+        rgba(0, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 255, 255, 0.12);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/*==================================================*
+ * RESULT
+ *==================================================*/
+
+.dst-result {
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+}
+
+
+.dst-result-main {
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background:
+        rgba(0, 255, 255, 0.045);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.12);
+
+    border-radius: 9px;
+
+}
+
+
+.dst-result-main span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        rgba(0, 255, 255, 0.55);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.dst-result-main strong {
+
+    display: block;
+
+    color: #00ffff;
+
+    font-size: 30px;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 255, 255, 0.35);
+
+}
+
+
+/*==================================================*
+ * RESULT GRID
+ *==================================================*/
+
+.dst-result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                150px,
+                1fr
+            )
+        );
+
+    gap: 12px;
+
+}
+
+
+.dst-result-grid > div {
+
+    padding: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border:
+        1px solid
+        rgba(0, 255, 255, 0.1);
+
+    border-radius: 8px;
+
+}
+
+
+.dst-result-grid span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        rgba(223, 255, 255, 0.45);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.dst-result-grid strong {
+
+    color: #00ffff;
+
+    font-size: 15px;
+
+}
+
+
+.dst-three-results {
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+}
+
+
+.dst-note {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    color:
+        rgba(223, 255, 255, 0.65);
+
+    background:
+        rgba(0, 255, 255, 0.04);
+
+    border-left:
+        2px solid
+        #00ffff;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/*==================================================*
+ * TABLET
+ *==================================================*/
+
+@media (max-width: 900px) {
+
+    .dst-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dst-menu {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 6px;
+
+    }
+
+
+    .dst-menu-header {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .dst-nav {
+
+        margin: 0;
+
+    }
+
+}
+
+
+/*==================================================*
+ * MOBILE
+ *==================================================*/
+
+@media (max-width: 600px) {
+
+    .dst-container {
+
+        padding: 0;
+
+    }
+
+
+    .dst-header {
+
+        padding: 20px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .dst-header h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .dst-layout {
+
+        gap: 12px;
+
+    }
+
+
+    .dst-menu {
+
+        grid-template-columns:
+            1fr;
+
+        padding: 8px;
+
+    }
+
+
+    .dst-menu-header {
+
+        padding: 10px;
+
+    }
+
+
+    .dst-calculator {
+
+        padding: 17px;
+
+    }
+
+
+    .dst-calculator-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .dst-calculator-icon {
+
+        width: 48px;
+        min-width: 48px;
+
+        height: 48px;
+
+        font-size: 20px;
+
+    }
+
+
+    .dst-calculator-header h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .dst-form-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dst-three-results {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dst-result-main strong {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+/*==================================================*
+ * SMALL PHONE
+ *==================================================*/
+
+@media (max-width: 375px) {
+
+    .dst-header {
+
+        padding: 16px;
+
+    }
+
+
+    .dst-header h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .dst-calculator {
+
+        padding: 13px;
+
+    }
+
+
+    .dst-nav {
+
+        font-size: 12px;
+
+    }
+
+}
