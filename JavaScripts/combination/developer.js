@@ -32,7 +32,7 @@ function loadDeveloperPage(canvas) {
                     <div class="dev-profile-photo-ring">
 
                         <img
-                            src="../img/logo/My-Photo.png"
+                            src="img/logo/My-Photo.png"
                             alt="Kuya Ram Profile Photo"
                             class="dev-profile-photo"
                         >
@@ -266,7 +266,7 @@ function loadDeveloperPage(canvas) {
                         aria-label="Portfolio"
                     >
                         <img
-                            src="../img/logo/my-logo.png"
+                            src="img/logo/my-logo.png"
                             alt="Portfolio"
                         >
                     </a>
@@ -281,7 +281,7 @@ function loadDeveloperPage(canvas) {
                         aria-label="Facebook"
                     >
                         <img
-                            src="../img/logo/messenger-logo.png"
+                            src="img/logo/messenger-logo.png"
                             alt="Facebook"
                         >
                     </a>
@@ -296,7 +296,7 @@ function loadDeveloperPage(canvas) {
                         aria-label="LinkedIn"
                     >
                         <img
-                            src="../img/logo/linkedIn-logo.png"
+                            src="img/logo/linkedIn-logo.png"
                             alt="LinkedIn"
                         >
                     </a>
@@ -311,7 +311,7 @@ function loadDeveloperPage(canvas) {
                         aria-label="GitHub"
                     >
                         <img
-                            src="../img/logo/github-logo.png"
+                            src="img/logo/github-logo.png"
                             alt="GitHub"
                         >
                     </a>
@@ -326,7 +326,7 @@ function loadDeveloperPage(canvas) {
                         aria-label="YouTube"
                     >
                         <img
-                            src="../img/logo/yt-logo.png"
+                            src="img/logo/yt-logo.png"
                             alt="YouTube"
                         >
                     </a>
@@ -341,7 +341,7 @@ function loadDeveloperPage(canvas) {
                         aria-label="Wattpad"
                     >
                         <img
-                            src="../img/logo/wattpad-logo.png"
+                            src="img/logo/wattpad-logo.png"
                             alt="Wattpad"
                         >
                     </a>

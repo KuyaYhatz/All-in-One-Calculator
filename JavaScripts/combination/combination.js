@@ -268,7 +268,7 @@ function loadCombination() {
                             <div class="atomIQ-avatar">
 
                                 <img
-                                    src="../img/atomIQ.png"
+                                    src="img/atomIQ.png"
                                     alt="AtomIQ Profile"
                                 >
 
