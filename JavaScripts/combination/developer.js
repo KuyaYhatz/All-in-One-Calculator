@@ -32,7 +32,7 @@ function loadDeveloperPage(canvas) {
                     <div class="dev-profile-photo-ring">
 
                         <img
-                            src="./img/logo/my-photo.png">
+                            src="../../img/logo/my-photo.png">
                             alt="Kuya Ram Profile Photo"
                             class="dev-profile-photo"
                         >
